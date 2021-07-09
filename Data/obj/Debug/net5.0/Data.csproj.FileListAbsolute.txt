@@ -1,0 +1,15 @@
+C:\Users\pejci\source\repos\Fantasy\Data\bin\Debug\net5.0\Data.deps.json
+C:\Users\pejci\source\repos\Fantasy\Data\bin\Debug\net5.0\Data.dll
+C:\Users\pejci\source\repos\Fantasy\Data\bin\Debug\net5.0\ref\Data.dll
+C:\Users\pejci\source\repos\Fantasy\Data\bin\Debug\net5.0\Data.pdb
+C:\Users\pejci\source\repos\Fantasy\Data\bin\Debug\net5.0\Model.dll
+C:\Users\pejci\source\repos\Fantasy\Data\bin\Debug\net5.0\Model.pdb
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\Data.csprojAssemblyReference.cache
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\Data.AssemblyInfoInputs.cache
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\Data.AssemblyInfo.cs
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\Data.csproj.CopyComplete
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\Data.dll
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\ref\Data.dll
+C:\Users\pejci\source\repos\Fantasy\Data\obj\Debug\net5.0\Data.pdb

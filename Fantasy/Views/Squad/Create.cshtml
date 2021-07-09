@@ -1,0 +1,117 @@
+﻿@model Fantasy.Models.CreateSquadViewModel
+
+<h1 class="h1">Squad</h1>
+
+<form class="form-check" method="post" asp-controller="Squad" asp-action="CreateSquad">
+    <label>SquadId:</label>
+    <input type="number" asp-for="Squad.SquadId" />
+    <label>User:</label>
+    <input type="text" asp-for="Squad.UserId" />
+    <label>Gameweek:</label>
+    <input type="number" asp-for="Squad.GameWeek" />
+    @*<label>Players</label>
+        <input type="number" asp-for="Players" />*@
+    @*<label>Team:</label>
+        <select asp-for="Team.ID" asp-items="@ViewBag.Teams"></Select>*@
+    <div class="form-group">
+        <label class="control-label">Player:</label>
+        @Html.DropDownList("Players", Model.Players, new { @class = "form-control", @id = "player-select" } )
+        <button class="btn-outline-primary" id="add-player">
+            Add player
+        </button>
+    </div>
+
+
+    <table class="table" id="players">
+        <thead>
+            <tr>
+                <th>Num</th>
+                <th>Player id</th>
+                <th>Player name</th>
+                <th>Player surname</th>
+                <th>Player position</th>
+                <th>Player team</th>
+                <th>Benched</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+
+
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Captain</label>
+        </div>
+        <select id="captain" class="custom-select">
+            <option selected>Choose...</option>
+        </select>
+        <input hidden type ="number" id="captainT" asp-for="Squad.Captain"/>
+    </div>
+
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Vice Captain</label>
+        </div>
+        <select id="vicecaptain" class="custom-select">
+            <option selected>Choose...</option>
+        </select>
+        <input hidden type="number" id="vcaptainT" asp-for="Squad.ViceCaptain" />
+    </div>
+
+</form>
+
+@section Scripts 
+{
+    <script>
+        $('#add-player').click(function (e) {
+            e.preventDefault();
+            //alert('btn cliked');
+            //     alert($('#player-select').val());
+            //$('#players tbody').append('<tr><td>' + '<input hidden value ="' + $('#player-select').val() + '" name = "Players[0].PlayerId"/>' +  $('#player-select').val() + '</td></tr>')
+            $.ajax({
+                url: '@Url.ActionLink("AddPlayer", "Squad")',
+                method:'post',
+                data: {
+                    PlayerId: $('#player-select').val(), Num: $('#players tbody tr').length,
+
+                },
+                success: function (data) {
+                    $('#players tbody').append(data);
+
+                }
+            });
+
+
+             $.ajax({
+                url: '@Url.ActionLink("AddOption", "Squad")',
+                method:'post',
+                data: {
+                    PlayerId: $('#player-select').val(), Num: $('#players tbody tr').length,
+
+                },
+                success: function (data) {
+                    $('#captain').append(data);
+
+                    $('#vicecaptain').append(data);
+                }
+             });
+            $('#player-select option:selected').remove();
+
+        });
+
+        $("#vicecaptain").change(function () {
+            $("#captainT").val($(this).val());
+        });
+        $("#captain").change(function () {
+            $("#vcaptainT").val($(this).val());
+        });
+
+    </script>
+}

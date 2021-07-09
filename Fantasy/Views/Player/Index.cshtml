@@ -1,0 +1,32 @@
+﻿
+@model List<Player>
+@{
+    ViewData["Title"] = "Player";
+}
+<h1>Jeeej</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Player ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Position</th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+        @foreach (Player p in Model)
+        {
+        <tr>
+            <td><a>@Html.ActionLink("Details", "Details", "Player", new { id = p.PlayerId })</a></td>
+            @*  <td>@s.User.Name  @s.User.Surname</td>*@
+            <td>@p.Name</td>
+            <td>@p.Surname</td>
+            <td>@p.Position</td>
+        </tr>
+        }
+
+    </tbody>
+</table>

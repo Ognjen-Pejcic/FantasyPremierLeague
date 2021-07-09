@@ -1,0 +1,110 @@
+﻿@model Fantasy.Models.LoginViewModel
+
+    @{
+        ViewData["Title"] = "Login";
+    }
+
+    @*<h1>Login</h1>
+
+    <h4>User</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" type="email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>*@
+
+
+    <link href="css/animate-custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/site.css" rel="stylesheet" type="text/css" media="all" />
+    <div id="container_demo">
+       
+        <a class="hiddenanchor" id="toregister"></a>
+        <a class="hiddenanchor" id="tologin"></a>
+        <div id="wrapper">
+            <form asp-action="Login"> 
+                <div id="login" class="animate form">
+                    @using (Html.BeginForm("Index", "User", FormMethod.Post, new { @autocomplete = "on" }))
+                    {
+                        <h2>Log in</h2>
+                        <p>
+                            <label for="username" class="uname" data-icon="u"><span>Your email</span></label>
+                            @*<input asp-for="Email" class="form-control" type="email" />*@
+                            @*<span asp-validation-for="Email" class="text-danger"></span>*@
+                              @Html.TextBoxFor(m => m.Email, new { @placeholder = "Email" })
+
+                            @* <input id="username" name="username" required="required" type="text" placeholder="EMAIL OR USERNAME" />*@
+                        </p>
+                        <p>
+                            <label for="password" class="youpasswd" data-icon="p"><span>Your password</span></label>
+                            @Html.PasswordFor(m => m.Password, new { @placeholder = "Password" })
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </p>
+                        <p class="login button">
+                            <input type="submit" value="Login" />
+                        </p>
+                        <p class="change_link" style="display:contents">
+                            <span>Not a member yet ?</span>
+                            <a href="#toregister" class="to_register">Register Now</a>
+                        </p>
+                    }
+
+                </div>
+            </form>
+            <div id="register" class="animate form">
+                <form asp-action="Register" method="post" autocomplete="on">
+                    <h2> Sign up </h2>
+                    <p>
+                        <label for="usernamesignup" class="uname" data-icon="u"><span>Name</span></label>
+                        @Html.TextBoxFor(m => m.Name, new { @placeholder = "Name" })
+                        @*<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Your name" />*@
+                    </p>
+                    <p>
+                        <label for="usernamesignup" class="uname" data-icon="u"><span>Surname</span></label>
+                        @Html.TextBoxFor(m => m.Surname, new { @placeholder = "Surname" })
+
+                      @*  <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Your surname" />*@
+
+                    </p>
+                    <p>
+                        <label for="emailsignup" class="youmail" data-icon="e"><span>Your email</span></label>
+                        @Html.TextBoxFor(m => m.Email, new { @placeholder = "Email" })
+                        @*<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="EXAMPLE@MAIL.COM" />*@
+                    </p>
+                    <p>
+                        <label for="usernamesignup" class="uname" data-icon="u"><span>Team name</span></label>
+                        @Html.TextBoxFor(m => m.TeamName, new { @placeholder = "Team name" })
+                        @*<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Team name" />*@
+                    </p>
+                    <p>
+                        <label for="passwordsignup" class="youpasswd" data-icon="p"><span>Your password</span></label>
+                        @Html.TextBoxFor(m => m.Password, new { @placeholder = "Password" })
+                        @*<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO" />*@
+                    </p>
+                    <p class="signin button">
+                        <input type="submit" value="Sign up" />
+                    </p>
+                    <p class="change_link" style="display:contents">
+                        <span>Already a member ?</span>
+                        <a href="#tologin" class="to_register">Log In</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+

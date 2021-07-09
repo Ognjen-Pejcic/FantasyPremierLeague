@@ -1,0 +1,12 @@
+﻿@model Fantasy.Models.PlayerViewModel
+
+<tr>
+
+    <td>@(Model.Num + 1)</td>
+    <td>@Model.PlayerId <input hidden  value="@Model.PlayerId" name="Squad.Players[@Model.Num].PlayerId" /></td>
+    <td>@Model.Name</td>
+    <td>@Model.SurName</td>
+    <td>@Model.Position</td>
+    <td>@Model.Team.Name.TeamName</td>
+    @*<td><input type="checkbox"  value="true" name="P[@Model.Num].Benched" /></td>*@
+</tr>

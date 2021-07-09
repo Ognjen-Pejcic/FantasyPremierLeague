@@ -1,0 +1,17 @@
+﻿@model Player
+
+<form class="form-check" method="post" asp-controller="Player" asp-action="CreatePlayer">
+    <label>Name:</label>
+    <input type="text" asp-for="Name" />
+     <span asp-validation-for="Name"></span>
+    Html.ValidationMessage("Name") 
+    <label>Surname:</label>
+    <input type="text" asp-for="Surname" />
+    <label>Position:</label>
+    <input type="text" asp-for="Position" />
+    <label>Team:</label>
+    <input type="number" asp-for="Team.ID" />
+    @*<label>Team:</label>
+    <select asp-for="Team.ID" asp-items="@ViewBag.Teams"></Select>*@
+    <input type="submit" value="Add" />
+</form>
