@@ -4,6 +4,7 @@ using Model.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -53,6 +54,9 @@ namespace Data.Implementation.Repositories
         {
             return context.Users.Single(u => u.Email == user.Email && u.Password == user.Password);
         }
-
+        public List<User> Search(Expression<Func<User, bool>> pred)
+        {
+            return context.Users.Where(pred).ToList();
+        }
     }
 }

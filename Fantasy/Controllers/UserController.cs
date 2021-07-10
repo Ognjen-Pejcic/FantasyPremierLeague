@@ -13,6 +13,7 @@ namespace Fantasy.Controllers
     public class UserController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
+       
         public UserController(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
@@ -34,7 +35,11 @@ namespace Fantasy.Controllers
                 Email = model.Email,
                 Password = model.Password
             }) ;
-            return RedirectToAction("Index", "Player");
+
+                HttpContext.Session.SetInt32("userid", user.UserId);
+                HttpContext.Session.SetString ("email", user.Email);
+                //ViewBag.IsLoggedIn = true;
+                return RedirectToAction("Index", "Player");
 
             }catch(Exception e)
             {
@@ -45,10 +50,17 @@ namespace Fantasy.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Register")]
         public ActionResult Register(LoginViewModel model)
         {
             try
             {
+                if(unitOfWork.User.Search(u=>u.Email == model.Email).Any())
+                {
+                    ModelState.AddModelError(string.Empty, "Username is taken!");
+                    return View();
+                }
                 unitOfWork.User.Add(new User
                 {
                     Email = model.Email,
@@ -57,8 +69,10 @@ namespace Fantasy.Controllers
                     Surname = model.Surname,
                     TeamName = model.TeamName
                 }) ;
+              
+                //ViewBag.IsLoggedIn = true;
                 unitOfWork.Commit();
-                return RedirectToAction("Index", "Player");
+                return RedirectToAction("Login");
 
             }
             catch (Exception e)
@@ -66,6 +80,16 @@ namespace Fantasy.Controllers
                 ModelState.AddModelError(string.Empty, "Wrong credidentials");
                 return View();
             }
+        }
+
+
+       
+        public ActionResult Logout()
+        {
+
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+            
         }
 
         // GET: UserController/Details/5

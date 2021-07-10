@@ -10,7 +10,7 @@ namespace Model.Domain
 {
     public class ApiPodaci
     {
-        public List<Team> teams { get; set; }
+        public List<Teams> teams { get; set; }
         public List<Elements> elements { get; set; }
         public List<Types> element_types { get; set; }
 
@@ -26,11 +26,20 @@ namespace Model.Domain
             return data;
         }
     }
+
+    public class Teams
+    {
+        public string name { get; set; }
+        public int id { get; set; }
+    }
+
     public class Elements {
+        public int id { get; set; }
         public string first_name { get; set; }
         public string second_name { get; set; }
         public int team { get; set; }
         public int element_type { get; set; }
+    
     }
 
     public class Types
@@ -38,4 +47,6 @@ namespace Model.Domain
         public int id { get; set; }
         public string plural_name_short { get; set; }
     }
+
+
 }

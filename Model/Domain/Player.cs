@@ -17,13 +17,13 @@ namespace Model.Domain
         public string Surname { get; set; }
         public Position Position { get; set; }
         public Team Team { get; set; }
-
+        public int TeamID { get; set; }
         public List<Squad> Squads { get; set; }
         public double Price { get; set; }
 
     }
     public enum Position
     {
-        GKP, DEF, MID, FWD
+        GKP=1, DEF=2, MID=3, FWD=4
     }
 }

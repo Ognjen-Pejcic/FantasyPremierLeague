@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace Data
 {
@@ -12,5 +13,7 @@ namespace Data
 
         void Delete(T s);
         T FindById(int id);
+
+        List<T> Search(Expression<Func<T, bool>> pred);
     }
 }

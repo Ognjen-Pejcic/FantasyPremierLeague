@@ -1,4 +1,5 @@
 ﻿using Data.UnitOfWork;
+using Fantasy.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Fantasy.Controllers
 {
+    [NotLoggedIn]
     public class TeamController : Controller
     {
         private IUnitOfWork uow;

@@ -5,6 +5,7 @@ using Model.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -81,6 +82,11 @@ namespace Data.Implementation
         public List<Squad> GetAllWithUser()
         {
             return context.Squads.Include(s => s.User).ToList();
+        }
+
+        public List<Squad> Search(Expression<Func<Squad, bool>> pred)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Data.UnitOfWork;
+using Fantasy.Filters;
 using Fantasy.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace Fantasy.Views
 {
+    [LoggedInUser]
     public class SquadController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
@@ -38,6 +40,17 @@ namespace Fantasy.Views
         // GET: SquadController/Create
         public ActionResult Create()
         {
+            int? userid = HttpContext.Session.GetInt32("userid");
+            if (userid != null)
+            {
+                ViewBag.IsLoggedIn = true;
+
+            }
+            else
+            {
+                return RedirectToAction("Index", "User");
+            }
+
             //List<PlayerSquadOption> players = unitOfWork.Players.GetAll();
             List<Player> players = unitOfWork.Player.GetAll();
 

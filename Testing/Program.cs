@@ -76,6 +76,7 @@ namespace Testing
             //    Players = s.Players.Select(p => new { p.Name, p.Surname })
             //}).ToList();
 
+            FantasyContext.Seed(new ModelBuilder());
 
             using  IUnitOfWork uow = new FantasyUnitOfWork(new FantasyContext());
             uow.Squad.Add(new Squad());

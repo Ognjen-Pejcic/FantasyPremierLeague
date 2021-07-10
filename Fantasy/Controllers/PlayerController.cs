@@ -1,4 +1,5 @@
 ﻿ using Data.UnitOfWork;
+using Fantasy.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Fantasy.Controllers
 {
-    
+    [LoggedInUser]
     public class PlayerController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
@@ -19,9 +20,20 @@ namespace Fantasy.Controllers
             this.unitOfWork = unitOfWork;
         }
         // GET: PlayerController
+        
         public ActionResult Index()
         {
             List<Player> players = unitOfWork.Player.GetAll();
+            int? userid = HttpContext.Session.GetInt32("userid");
+            if (userid != null)
+            {
+                ViewBag.IsLoggedIn = true;
+                
+            }
+            else
+            {
+              return   RedirectToAction("Index", "User");
+            }
             return View(players);
         }
 
@@ -42,7 +54,7 @@ namespace Fantasy.Controllers
                 teams.Add(new SelectListItem
                 {
                     Value = t.ID.ToString(),
-                    Text = t.Name
+                    Text = t.TeamName
                 });
             }
             ViewData["Teams"] = teams;

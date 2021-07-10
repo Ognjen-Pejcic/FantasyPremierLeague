@@ -1,4 +1,6 @@
 using Data.UnitOfWork;
+using Fantasy.Filters;
+using Fantasy.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,9 +27,20 @@ namespace Fantasy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
             services.AddControllersWithViews();
+            services.AddScoped<LoggedInUser>();
+            services.AddScoped<NotLoggedIn>();
+
             services.AddScoped<IUnitOfWork, FantasyUnitOfWork>();
             services.AddDbContext<FantasyContext>();
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +60,9 @@ namespace Fantasy
             app.UseStaticFiles();
 
             app.UseRouting();
-
+           
+            app.UseSession();
+            //app.UseCheckIfUserIsLoggedInMiddleware();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
