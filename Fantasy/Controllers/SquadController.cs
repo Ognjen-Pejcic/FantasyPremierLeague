@@ -28,7 +28,20 @@ namespace Fantasy.Views
         }
         // GET: SquadController
         public ActionResult Index()
+
         {
+
+            int? userid = HttpContext.Session.GetInt32("userid");
+            if (userid != null)
+            {
+                ViewBag.IsLoggedIn = true;
+
+            }
+            else
+            {
+                return RedirectToAction("Index", "User");
+            }
+
             IUnitOfWork uow = new FantasyUnitOfWork(new FantasyContext());
             Squad squad = uow.Squad.GetSquadForUser((int)HttpContext.Session.GetInt32("userid"));
             if (squad == null)
@@ -114,11 +127,17 @@ namespace Fantasy.Views
                 _notyf.Error("Squad must have 15 players");
                 return RedirectToAction("Create");
             }
+            List<Player> newpl = new List<Player>(); 
+            foreach(var item in model.Squad.Players)
+            {
+                newpl.Add(unitOfWork.Player.FindById(item.PlayerId));
 
-            if (model.Squad.Players.Where(p => p.Position == Position.GKP).Count() != 2 ||
-                model.Squad.Players.Where(p => p.Position == Position.DEF).Count() != 5 ||
-                model.Squad.Players.Where(p => p.Position == Position.MID).Count() != 5 ||
-                model.Squad.Players.Where(p => p.Position == Position.FWD).Count() != 3)
+            }
+
+            if (newpl.Where(p => p.Position == Position.GKP).Count() != 2 ||
+                newpl.Where(p => p.Position == Position.DEF).Count() != 5 ||
+               newpl.Where(p => p.Position == Position.MID).Count() != 5 ||
+                newpl.Where(p => p.Position == Position.FWD).Count() != 3)
             {
 
                 _notyf.Error("Squad must have 2 GKP, 5 DEF, 5 MID and 3 FWD");

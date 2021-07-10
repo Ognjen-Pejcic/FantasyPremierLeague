@@ -26,5 +26,6 @@ namespace Model.Domain
         public int Benched1 { get; set; }
         public int Benched2 { get; set; }
         public int Benched3 { get; set; }
+        public int Benched4 { get; set; }
     }
 }

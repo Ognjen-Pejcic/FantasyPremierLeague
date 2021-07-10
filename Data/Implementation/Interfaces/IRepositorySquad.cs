@@ -13,5 +13,7 @@ namespace Data.Interfaces
       //  void Add(Squad entity, List<PlayerSquadOption> players);
        
         Squad FindByID(int UserId,int SquadId);
+        void Update(Squad squad);
+        Squad GetSquadForUser(int v);
     }
 }

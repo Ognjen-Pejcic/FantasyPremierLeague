@@ -84,9 +84,27 @@ namespace Data.Implementation
             return context.Squads.Include(s => s.User).ToList();
         }
 
+        public Squad GetSquadForUser(int v)
+        {
+            try
+            {
+                return context.Squads.Include(s => s.User).Include(p => p.Players).First(s => s.UserId == v);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        
+        }
+
         public List<Squad> Search(Expression<Func<Squad, bool>> pred)
         {
             throw new NotImplementedException();
+        }
+
+        public void Update(Squad squad)
+        {
+            context.Update(squad);
         }
     }
 }

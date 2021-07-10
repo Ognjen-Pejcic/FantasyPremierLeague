@@ -13,21 +13,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\Aleksa\Source\Repos\FantasyPremierLeague\Fantasy\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\pejci\source\repos\Fantasy\Fantasy\Views\_ViewImports.cshtml"
 using Fantasy;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Aleksa\Source\Repos\FantasyPremierLeague\Fantasy\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\pejci\source\repos\Fantasy\Fantasy\Views\_ViewImports.cshtml"
 using Fantasy.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Aleksa\Source\Repos\FantasyPremierLeague\Fantasy\Views\_ViewImports.cshtml"
+#line 3 "C:\Users\pejci\source\repos\Fantasy\Fantasy\Views\_ViewImports.cshtml"
 using Model.Domain;
 
 #line default
@@ -102,7 +102,7 @@ WriteAttributeValue("", 170, Model.Num, 170, 10, false);
             EndWriteAttribute();
             WriteLiteral(" /></td>\r\n    <td>");
 #nullable restore
-#line 7 "C:\Users\Aleksa\Source\Repos\FantasyPremierLeague\Fantasy\Views\Shared\SquadPlayerView.cshtml"
+#line 7 "C:\Users\pejci\source\repos\Fantasy\Fantasy\Views\Shared\SquadPlayerView.cshtml"
    Write(Model.Name);
 
 #line default
@@ -110,7 +110,7 @@ WriteAttributeValue("", 170, Model.Num, 170, 10, false);
 #nullable disable
             WriteLiteral("</td>\r\n    <td>");
 #nullable restore
-#line 8 "C:\Users\Aleksa\Source\Repos\FantasyPremierLeague\Fantasy\Views\Shared\SquadPlayerView.cshtml"
+#line 8 "C:\Users\pejci\source\repos\Fantasy\Fantasy\Views\Shared\SquadPlayerView.cshtml"
    Write(Model.SurName);
 
 #line default
@@ -118,7 +118,7 @@ WriteAttributeValue("", 170, Model.Num, 170, 10, false);
 #nullable disable
             WriteLiteral("</td>\r\n    <td>");
 #nullable restore
-#line 9 "C:\Users\Aleksa\Source\Repos\FantasyPremierLeague\Fantasy\Views\Shared\SquadPlayerView.cshtml"
+#line 9 "C:\Users\pejci\source\repos\Fantasy\Fantasy\Views\Shared\SquadPlayerView.cshtml"
    Write(Model.Position);
 
 #line default

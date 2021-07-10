@@ -21,21 +21,21 @@
         </button>
 
         @*@Html.DropDownList("PlayersGKP", Model.PlayersGKP, new { @class = "form-control", @id = "player-selectGKP" })
-        <button class="btn-outline-primary" id="add-player">
-            Add GKP
-        </button>
-        @Html.DropDownList("PlayersDEF", Model.PlayersDEF, new { @class = "form-control", @id = "player-selectDEF" })
-        <button class="btn-outline-primary" id="add-player">
-            Add DEF
-        </button>
-        @Html.DropDownList("PlayersMID", Model.PlayersMID, new { @class = "form-control", @id = "player-selectMID" })
-        <button class="btn-outline-primary" id="add-player">
-            Add MID
-        </button>
-        @Html.DropDownList("PlayersFWD", Model.PlayersFWD, new { @class = "form-control", @id = "player-selectFWD" })
-        <button class="btn-outline-primary" id="add-player">
-            Add FWD
-        </button>*@
+            <button class="btn-outline-primary" id="add-player">
+                Add GKP
+            </button>
+            @Html.DropDownList("PlayersDEF", Model.PlayersDEF, new { @class = "form-control", @id = "player-selectDEF" })
+            <button class="btn-outline-primary" id="add-player">
+                Add DEF
+            </button>
+            @Html.DropDownList("PlayersMID", Model.PlayersMID, new { @class = "form-control", @id = "player-selectMID" })
+            <button class="btn-outline-primary" id="add-player">
+                Add MID
+            </button>
+            @Html.DropDownList("PlayersFWD", Model.PlayersFWD, new { @class = "form-control", @id = "player-selectFWD" })
+            <button class="btn-outline-primary" id="add-player">
+                Add FWD
+            </button>*@
     </div>
 
 
@@ -56,9 +56,6 @@
         </tbody>
     </table>
 
-    <div class="form-group">
-        <input type="submit" id="cr" value="Create" class="btn btn-primary" />
-    </div>
 
 
 
@@ -84,6 +81,50 @@
     </div>
 
 
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Benched 1</label>
+        </div>
+        <select id="bench1" class="custom-select">
+            <option selected>Choose...</option>
+        </select>
+        <input hidden type="number" id="becnhed1T" asp-for="Squad.Benched1" />
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Benched 2</label>
+        </div>
+        <select id="bench2" class="custom-select">
+            <option selected>Choose...</option>
+        </select>
+        <input hidden type="number" id="becnhed2T" asp-for="Squad.Benched2" />
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Benched 3</label>
+        </div>
+        <select id="bench3" class="custom-select">
+            <option selected>Choose...</option>
+        </select>
+        <input hidden type="number" id="becnhed3T" asp-for="Squad.Benched3" />
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Benched 4</label>
+        </div>
+        <select id="bench4" class="custom-select">
+            <option selected>Choose...</option>
+        </select>
+        <input hidden type="number" id="becnhed4T" asp-for="Squad.Benched4" />
+    </div>
+
+
+
+
+
+    <div class="form-group">
+        <input type="submit" id="cr" value="Create" class="btn btn-primary" />
+    </div>
 
 
 </form>
@@ -121,6 +162,11 @@
                     $('#captain').append(data);
 
                     $('#vicecaptain').append(data);
+                    $('#benched1').append(data);
+                    $('#benched2').append(data);
+                    $('#benched3').append(data);
+                    $('#benched4').append(data);
+
                 }
              });
             $('#player-select option:selected').remove();

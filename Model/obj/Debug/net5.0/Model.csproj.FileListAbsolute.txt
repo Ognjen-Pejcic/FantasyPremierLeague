@@ -12,4 +12,3 @@ C:\Users\pejci\source\repos\Fantasy\Model\obj\Debug\net5.0\Model.dll
 C:\Users\pejci\source\repos\Fantasy\Model\obj\Debug\net5.0\ref\Model.dll
 C:\Users\pejci\source\repos\Fantasy\Model\obj\Debug\net5.0\Model.pdb
 C:\Users\pejci\source\repos\Fantasy\Model\obj\Debug\net5.0\Model.genruntimeconfig.cache
-C:\Users\pejci\source\repos\Fantasy\Model\obj\Debug\net5.0\Model.csprojAssemblyReference.cache
