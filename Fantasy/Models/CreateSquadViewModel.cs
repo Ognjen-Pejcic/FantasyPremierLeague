@@ -20,6 +20,11 @@ namespace Fantasy.Models
         public int UserId { get; set; }
 
         public List<SelectListItem> Players { get; set; }
+        public List<SelectListItem> PlayersGKP { get; set; }
+        public List<SelectListItem> PlayersDEF { get; set; }
+        public List<SelectListItem> PlayersMID { get; set; }
+        public List<SelectListItem> PlayersFWD { get; set; }
+
 
         public List<Player> P { get; set; }
         public int A { get; set; }

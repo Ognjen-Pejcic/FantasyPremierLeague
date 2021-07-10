@@ -3,10 +3,10 @@
 <h1 class="h1">Squad</h1>
 
 <form class="form-check" method="post" asp-controller="Squad" asp-action="CreateSquad">
-    <label>SquadId:</label>
-    <input type="number" asp-for="Squad.SquadId" />
-    <label>User:</label>
-    <input type="text" asp-for="Squad.UserId" />
+    @*<label>SquadId:</label>
+        <input type="number" asp-for="Squad.SquadId" />
+        <label>User:</label>
+        <input type="text" asp-for="Squad.UserId" />*@
     <label>Gameweek:</label>
     <input type="number" asp-for="Squad.GameWeek" />
     @*<label>Players</label>
@@ -15,10 +15,27 @@
         <select asp-for="Team.ID" asp-items="@ViewBag.Teams"></Select>*@
     <div class="form-group">
         <label class="control-label">Player:</label>
-        @Html.DropDownList("Players", Model.Players, new { @class = "form-control", @id = "player-select" } )
+        @Html.DropDownList("Players", Model.Players, new { @class = "form-control", @id = "player-select" })
         <button class="btn-outline-primary" id="add-player">
             Add player
         </button>
+
+        @*@Html.DropDownList("PlayersGKP", Model.PlayersGKP, new { @class = "form-control", @id = "player-selectGKP" })
+        <button class="btn-outline-primary" id="add-player">
+            Add GKP
+        </button>
+        @Html.DropDownList("PlayersDEF", Model.PlayersDEF, new { @class = "form-control", @id = "player-selectDEF" })
+        <button class="btn-outline-primary" id="add-player">
+            Add DEF
+        </button>
+        @Html.DropDownList("PlayersMID", Model.PlayersMID, new { @class = "form-control", @id = "player-selectMID" })
+        <button class="btn-outline-primary" id="add-player">
+            Add MID
+        </button>
+        @Html.DropDownList("PlayersFWD", Model.PlayersFWD, new { @class = "form-control", @id = "player-selectFWD" })
+        <button class="btn-outline-primary" id="add-player">
+            Add FWD
+        </button>*@
     </div>
 
 
@@ -26,12 +43,13 @@
         <thead>
             <tr>
                 <th>Num</th>
-                <th>Player id</th>
+                <th hidden>Player id</th>
                 <th>Player name</th>
                 <th>Player surname</th>
                 <th>Player position</th>
-                <th>Player team</th>
-                <th>Benched</th>
+                <th>Price</th>
+                <th>Team</th>
+                <th>Remove from squad</th>
             </tr>
         </thead>
         <tbody>
@@ -39,7 +57,7 @@
     </table>
 
     <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
+        <input type="submit" id="cr" value="Create" class="btn btn-primary" />
     </div>
 
 
@@ -51,7 +69,7 @@
         <select id="captain" class="custom-select">
             <option selected>Choose...</option>
         </select>
-        <input hidden type ="number" id="captainT" asp-for="Squad.Captain"/>
+        <input hidden type="number" id="captainT" asp-for="Squad.Captain" />
     </div>
 
 
@@ -65,9 +83,12 @@
         <input hidden type="number" id="vcaptainT" asp-for="Squad.ViceCaptain" />
     </div>
 
+
+
+
 </form>
 
-@section Scripts 
+@section Scripts
 {
     <script>
         $('#add-player').click(function (e) {
@@ -113,5 +134,23 @@
             $("#vcaptainT").val($(this).val());
         });
 
+        $('#players').on('click', ".delete", function () {
+            var id = $(this).closest('tr')[0].cells[1].outerText;
+
+            var name = $(this).closest('tr')[0].cells[2].outerText;
+            var sname = $(this).closest('tr')[0].cells[3].outerText;
+            var pos = $(this).closest('tr')[0].cells[4].outerText;
+            var price = $(this).closest('tr')[0].cells[5].outerText;
+            var team = $(this).closest('tr')[0].cells[6].outerText;
+
+
+
+            $('#player-select').append($("<option />").val(id).html(name + " " + sname + " | " + pos + " | $" + price + " mill"));
+
+            $(this).closest('tr').remove();
+
+
+           
+        });
     </script>
 }

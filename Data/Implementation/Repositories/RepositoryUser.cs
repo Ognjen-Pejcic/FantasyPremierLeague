@@ -32,7 +32,7 @@ namespace Data.Implementation.Repositories
 
         public User FindById(int id)
         {
-            throw new NotImplementedException();
+            return context.Users.Find(id);
         }
 
         public User FindWithInclude(Predicate<User> condition)

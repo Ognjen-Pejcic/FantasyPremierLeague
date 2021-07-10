@@ -1,3 +1,4 @@
+using AspNetCoreHero.ToastNotification;
 using Data.UnitOfWork;
 using Fantasy.Filters;
 using Fantasy.Middleware;
@@ -28,7 +29,12 @@ namespace Fantasy
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDistributedMemoryCache();
+            services.AddNotyf(config=> {
+                config.DurationInSeconds = 7;
+                config.IsDismissable = true;
+                config.Position = NotyfPosition.BottomCenter;
 
+            });
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);

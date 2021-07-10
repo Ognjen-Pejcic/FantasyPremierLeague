@@ -2,11 +2,18 @@
 
 <tr>
 
-    <td>@(Model.Num + 1)</td>
-    <td>@Model.PlayerId <input hidden  value="@Model.PlayerId" name="Squad.Players[@Model.Num].PlayerId" /></td>
+    <td >@(Model.Num + 1)</td>
+    <td hidden>@Model.PlayerId <input hidden value="@Model.PlayerId" name="Squad.Players[@Model.Num].PlayerId" /></td>
     <td>@Model.Name</td>
     <td>@Model.SurName</td>
     <td>@Model.Position</td>
+    <td>@Model.Price</td>
     <td>@Model.Team.TeamName</td>
+
+    <td>
+        <button type ="button" class="delete" style="border: none; background: none; margin: 0 auto; display: block;" id="@(Model.Num+1)">
+            <img src="~/images/delete.png" style=" width: 30px; height: 30px; margin: 0 auto; display: block;">
+        </button>
+    </td>
     @*<td><input type="checkbox"  value="true" name="P[@Model.Num].Benched" /></td>*@
 </tr>

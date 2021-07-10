@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CtOZy5thJyHseUT2VDmR7puWH6P6aYSM45WP+yq1B9qgjatbTbpivWTmjwKkgu6rKl5LVGbPYVNCpXhAkgFnug==",
+  "dgSpecHash": "ECDQZs78jGS3CvTeRpviE7PNYcKzcUGlDDqRNBkvRmXANcaYwON3Oq4zGFyuz4diy1uomJauwXfL9jLGZH0+5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\pejci\\source\\repos\\Fantasy\\Fantasy\\Fantasy.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pejci\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "C:\\Users\\pejci\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pejci\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\pejci\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -58,7 +59,7 @@
     "C:\\Users\\pejci\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
     "C:\\Users\\pejci\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\pejci\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\pejci\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\pejci\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\pejci\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\pejci\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\pejci\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

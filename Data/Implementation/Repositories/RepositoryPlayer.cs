@@ -56,7 +56,7 @@ namespace Data.Implementation
 
         public List<Player> GetAll()
         {
-            return context.Players.ToList();
+            return context.Players.Include(p=>p.Team).ToList();
         }
 
         public List<Player> Search(Expression<Func<Player, bool>> p)

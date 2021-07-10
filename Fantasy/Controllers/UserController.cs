@@ -72,7 +72,7 @@ namespace Fantasy.Controllers
               
                 //ViewBag.IsLoggedIn = true;
                 unitOfWork.Commit();
-                return RedirectToAction("Login");
+                return Index();
 
             }
             catch (Exception e)

@@ -19,6 +19,7 @@ namespace Fantasy.Models
         public Position Position { get; set; }
         public Team Team { get; set; }
 
+        public double Price { get; set; }
         public bool Benched { get; set; }
         public bool Captain { get; set; }
         public bool vice { get; set; }

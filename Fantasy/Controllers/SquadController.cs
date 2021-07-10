@@ -1,4 +1,5 @@
-﻿using Data.UnitOfWork;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Data.UnitOfWork;
 using Fantasy.Filters;
 using Fantasy.Models;
 using Microsoft.AspNetCore.Http;
@@ -11,16 +12,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace Fantasy.Views
 {
     [LoggedInUser]
     public class SquadController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
+        private readonly INotyfService _notyf;
 
-        public SquadController(IUnitOfWork unitOfWork)
+        public SquadController(IUnitOfWork unitOfWork, INotyfService notyf)
         {
             this.unitOfWork = unitOfWork;
+            this._notyf = notyf;
         }
         // GET: SquadController
         public ActionResult Index()
@@ -54,11 +58,26 @@ namespace Fantasy.Views
             //List<PlayerSquadOption> players = unitOfWork.Players.GetAll();
             List<Player> players = unitOfWork.Player.GetAll();
 
-            List<SelectListItem> selectList = players.Select(s => new SelectListItem { Text = s.Name, Value = s.PlayerId.ToString() }).ToList();
+            List<SelectListItem> selectList = players.Select(s => new SelectListItem { Text = s.Name + " " + s.Surname + " | "  + s.Team.TeamName + " | $" + s.Price + " mill", Value = s.PlayerId.ToString() }).ToList();
+
+
+            List<Player> playersG = unitOfWork.Player.Search(u=>u.Position==Position.GKP);
+            List<SelectListItem> selectListG = playersG.Select(s => new SelectListItem { Text = s.Name +" " +s.Surname, Value = s.PlayerId.ToString() }).ToList();
+            List<Player> playersD = unitOfWork.Player.Search(u => u.Position == Position.DEF);
+            List<SelectListItem> selectListD = playersD.Select(s => new SelectListItem { Text = s.Name + " " + s.Surname, Value = s.PlayerId.ToString() }).ToList();
+            List<Player> playersM = unitOfWork.Player.Search(u => u.Position == Position.MID);
+            List<SelectListItem> selectListM = playersM.Select(s => new SelectListItem { Text = s.Name + " " + s.Surname, Value = s.PlayerId.ToString() }).ToList();
+            List<Player> playersF = unitOfWork.Player.Search(u => u.Position == Position.FWD);
+            List<SelectListItem> selectListF = playersF.Select(s => new SelectListItem { Text = s.Name + " " + s.Surname, Value = s.PlayerId.ToString() }).ToList();
+
             ViewBag.Players = selectList;
             CreateSquadViewModel model = new CreateSquadViewModel
             {
-                Players = selectList
+                Players = selectList,
+                PlayersGKP = selectListG,
+                PlayersDEF = selectListD,
+                PlayersMID = selectListM,
+                PlayersFWD = selectListF
             };
             return View(model);
         }
@@ -67,10 +86,33 @@ namespace Fantasy.Views
         [HttpPost]
         [ActionName("CreateSquad")]   
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateSquadViewModel model)
+        public  ActionResult Create(CreateSquadViewModel model)
         {
+            if (model.Squad.Players.Count() != 15)
+            {
+
+                _notyf.Error("Squad must have 15 players");
+                return RedirectToAction("Create");
+            }
+
+            if (model.Squad.Players.Where(p => p.Position == Position.GKP).Count() != 2 ||
+                model.Squad.Players.Where(p => p.Position == Position.DEF).Count() != 5 ||
+                model.Squad.Players.Where(p => p.Position == Position.MID).Count() != 5 ||
+                model.Squad.Players.Where(p => p.Position == Position.FWD).Count() != 3)
+            {
+
+                _notyf.Error("Squad must have 2 GKP, 5 DEF, 5 MID and 3 FWD");
+                return RedirectToAction("Create");
+            }
+
+
+
+
             try
             {
+                int userid =(int)HttpContext.Session.GetInt32("userid");
+                User u = unitOfWork.User.FindById(userid);
+                model.Squad.User = u;
                 unitOfWork.Squad.Add(model.Squad);
                 unitOfWork.Commit();
                 return RedirectToAction("Index", "Player");
@@ -134,6 +176,7 @@ namespace Fantasy.Views
                 Num = model.Num,
                 PlayerId = p.PlayerId,
                 Name = p.Name,
+                Price = p.Price,
                 SurName = p.Surname,
                 Position = p.Position,
                 Team = p.Team

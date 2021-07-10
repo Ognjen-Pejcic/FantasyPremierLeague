@@ -159,3 +159,7 @@ C:\Users\pejci\source\repos\Fantasy\Fantasy\obj\Debug\net5.0\Razor\Views\Squad\V
 C:\Users\pejci\source\repos\Fantasy\Fantasy\obj\Debug\net5.0\Razor\Views\Shared\SquadPlayerView.cshtml.g.cs
 C:\Users\pejci\source\repos\Fantasy\Fantasy\obj\Debug\net5.0\Razor\Views\Shared\OptionPlayerView.cshtml.g.cs
 C:\Users\pejci\source\repos\Fantasy\Fantasy\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
+C:\Users\pejci\source\repos\Fantasy\Fantasy\bin\Debug\net5.0\Fantasy.StaticWebAssets.xml
+C:\Users\pejci\source\repos\Fantasy\Fantasy\bin\Debug\net5.0\AspNetCoreHero.ToastNotification.Views.dll
+C:\Users\pejci\source\repos\Fantasy\Fantasy\bin\Debug\net5.0\AspNetCoreHero.ToastNotification.dll
+C:\Users\pejci\source\repos\Fantasy\Fantasy\obj\Debug\net5.0\Fantasy.MvcApplicationPartsAssemblyInfo.cs
