@@ -7418,19 +7418,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pejci\\.nuget\\packages\\": {}
+    "C:\\Users\\Aleksa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pejci\\source\\repos\\Fantasy\\Fantasy\\Fantasy.csproj",
+      "projectUniqueName": "C:\\Users\\Aleksa\\Source\\Repos\\FantasyPremierLeague\\Fantasy\\Fantasy.csproj",
       "projectName": "Fantasy",
-      "projectPath": "C:\\Users\\pejci\\source\\repos\\Fantasy\\Fantasy\\Fantasy.csproj",
-      "packagesPath": "C:\\Users\\pejci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pejci\\source\\repos\\Fantasy\\Fantasy\\obj\\",
+      "projectPath": "C:\\Users\\Aleksa\\Source\\Repos\\FantasyPremierLeague\\Fantasy\\Fantasy.csproj",
+      "packagesPath": "C:\\Users\\Aleksa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aleksa\\Source\\Repos\\FantasyPremierLeague\\Fantasy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pejci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aleksa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7444,8 +7444,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\pejci\\source\\repos\\Fantasy\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\pejci\\source\\repos\\Fantasy\\Data\\Data.csproj"
+            "C:\\Users\\Aleksa\\Source\\Repos\\FantasyPremierLeague\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\Aleksa\\Source\\Repos\\FantasyPremierLeague\\Data\\Data.csproj"
             }
           }
         }
