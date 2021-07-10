@@ -39,7 +39,7 @@ namespace Fantasy.Controllers
                 HttpContext.Session.SetInt32("userid", user.UserId);
                 HttpContext.Session.SetString ("email", user.Email);
                 //ViewBag.IsLoggedIn = true;
-                return RedirectToAction("Index", "Player");
+                return RedirectToAction("Index", "Squad");
 
             }catch(Exception e)
             {
@@ -72,7 +72,7 @@ namespace Fantasy.Controllers
               
                 //ViewBag.IsLoggedIn = true;
                 unitOfWork.Commit();
-                return RedirectToAction("Login");
+                return Index();
 
             }
             catch (Exception e)

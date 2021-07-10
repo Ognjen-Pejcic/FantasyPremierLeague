@@ -26,8 +26,28 @@ namespace Fantasy.Views
         public ActionResult Index()
         {
             IUnitOfWork uow = new FantasyUnitOfWork(new FantasyContext());
-            List<Squad> Squads = uow.Squad.GetAllWithUser();
-            return View(Squads);
+            Squad squad = uow.Squad.GetSquadForUser((int)HttpContext.Session.GetInt32("userid"));
+            if (squad == null)
+                return RedirectToAction("Create", "Squad");
+            SquadViewModel svm = new SquadViewModel();
+
+            svm.StartLine = squad.Players.FindAll(p => p.PlayerId != squad.Benched1 && p.PlayerId != squad.Benched2 && p.PlayerId != squad.Benched3 && p.PlayerId != squad.Benched4);
+
+            svm.Goalkeeper = squad.Players.First(p => (int)p.Position == 1 && p.PlayerId != squad.Benched1
+            && p.PlayerId != squad.Benched2 && p.PlayerId != squad.Benched3 && p.PlayerId != squad.Benched4);
+
+            svm.Bench = squad.Players.FindAll(p => p.PlayerId == squad.Benched1 || p.PlayerId == squad.Benched2 || p.PlayerId == squad.Benched3 || p.PlayerId == squad.Benched4).ToList();
+
+            svm.DefenderLine = squad.Players.FindAll(p => (int)p.Position == 2 && p.PlayerId != squad.Benched1
+            && p.PlayerId != squad.Benched2 && p.PlayerId != squad.Benched3 && p.PlayerId != squad.Benched4).ToList();
+
+            svm.MidfielderLine = squad.Players.FindAll(p => (int)p.Position == 3 && p.PlayerId != squad.Benched1
+            && p.PlayerId != squad.Benched2 && p.PlayerId != squad.Benched3 && p.PlayerId != squad.Benched4).ToList();
+
+            svm.AttackLine = squad.Players.FindAll(p => (int)p.Position == 4 && p.PlayerId != squad.Benched1
+            && p.PlayerId != squad.Benched2 && p.PlayerId != squad.Benched3 && p.PlayerId != squad.Benched4).ToList();
+
+            return View(svm);
         }
 
         // GET: SquadController/Details/5
@@ -54,7 +74,7 @@ namespace Fantasy.Views
             //List<PlayerSquadOption> players = unitOfWork.Players.GetAll();
             List<Player> players = unitOfWork.Player.GetAll();
 
-            List<SelectListItem> selectList = players.Select(s => new SelectListItem { Text = s.Name, Value = s.PlayerId.ToString() }).ToList();
+            List<SelectListItem> selectList = players.Select(s => new SelectListItem { Text = s.Name + " " + s.Position, Value = s.PlayerId.ToString() }).ToList();
             ViewBag.Players = selectList;
             CreateSquadViewModel model = new CreateSquadViewModel
             {
@@ -65,7 +85,7 @@ namespace Fantasy.Views
 
         // POST: SquadController/Create
         [HttpPost]
-        [ActionName("CreateSquad")]   
+        [ActionName("CreateSquad")]
         [ValidateAntiForgeryToken]
         public ActionResult Create(CreateSquadViewModel model)
         {
@@ -75,7 +95,7 @@ namespace Fantasy.Views
                 unitOfWork.Commit();
                 return RedirectToAction("Index", "Player");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, ex.Message);
 
@@ -139,6 +159,34 @@ namespace Fantasy.Views
                 Team = p.Team
             };
             return PartialView("SquadPlayerView", model1);
+        }
+
+        [HttpGet]
+        public void CheckIfPlayersCouldRotate(int activePlayerId, int benchedPlayerId)
+        {
+            Squad squad = unitOfWork.Squad.GetSquadForUser((int)HttpContext.Session.GetInt32("userid"));
+          
+
+
+
+            if (squad.Benched1 == benchedPlayerId)
+                squad.Benched1 = activePlayerId;
+            else if (squad.Benched2 == benchedPlayerId)
+                squad.Benched2 = activePlayerId;
+            else if (squad.Benched3 == benchedPlayerId)
+                squad.Benched3 = activePlayerId;
+            else if (squad.Benched4 == benchedPlayerId)
+                squad.Benched4 = activePlayerId;
+
+            List<int> benched = new List<int> { (int)squad.Benched1 , (int)squad.Benched2, (int)squad.Benched3, (int)squad.Benched4 };
+
+            //cheking goalkeepers players
+            //if (benched.Contains())
+
+
+                unitOfWork.Squad.Update(squad);
+            unitOfWork.Commit();
+            
         }
 
         public ActionResult AddOption(PlayerViewModel model)

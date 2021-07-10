@@ -1,29 +1,108 @@
 ﻿
-@model List<Squad>
-@{ 
+@model SquadViewModel
+@{
     ViewData["Title"] = "Squads";
+    int i = 0;
 }
-<h1>Jeeej</h1>
+@section Style {
+    <link rel="stylesheet" href="~/css/mySquadStyling.css" />
+}
+<h1>My squad</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Team name</th>
-            <th>User</th>
-         
-        </tr>
-      
-    </thead>
-    <tbody>
+<div class="grass">
+    <div class="lineup">
+        <div class="gk">
+            <div class="row">
+                <div class="player" id="@Model.Goalkeeper.PlayerId">
+                    <img src="/images/kit.png" alt="">
+                    <p>@Model.Goalkeeper.Name</p>
+                </div>
+            </div>
+        </div>
+        <div class="def">
+            <div class="row">
+                @foreach (var item in Model.DefenderLine)
+                {
+                    <div class="player" id="@item.PlayerId">
+                        <img src="/images/kit.png" alt="">
+                        <p>@item.Name</p>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="mid">
+            <div class="row">
+                @foreach (var item in Model.MidfielderLine)
+                {
+                    <div class="player" id="@item.PlayerId">
+                        <img src="/images/kit.png" alt="">
+                        <p>@item.Name</p>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="fwd">
+            <div class="row">
+                @foreach (var item in Model.AttackLine)
+                {
+                    <div class="player" id="@item.PlayerId">
+                        <img src="/images/kit.png" alt="">
+                        <p>@item.Name</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="bench">
+        <div class="row">
+            @foreach (var item in Model.Bench)
+            {
+                <div class="player" id="@item.PlayerId">
+                    <img src="/images/kit.png" alt="">
+                    <p>@item.Name</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<p style="font-size: 20px;">Rotate player</p>
+<div class="change">
+    <div>
+        <p>Start linup</p>
+        <select id="in">
+            @for (int j = 0; j < Model.StartLine.Count; j++)
+            {
+                <option value="@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name</option>
+            }
+        </select>
+    </div>
+    <div>
+        <p>Reserves</p>
+        <select id="out">
+            @for (int j = Model.Bench.Count - 4; j < Model.Bench.Count; j++)
+            {
+                <option value="@Model.Bench[j].PlayerId">@Model.Bench[j].Name</option>
+            }
+        </select>
+    </div>
+    <button onclick="Rotate()">Rotate</button>
+</div>
+@section Scripts
+{
+    <script>
+        function Rotate() {
+             $.ajax({
+                url: '@Url.ActionLink("CheckIfPlayersCouldRotate", "Squad")',
+                method:'get',
+                data: {
+                    activePlayerId: $('#in').val(),
+                    benchedPlayerId: $('#out').val()
+                },
+                success: function () {
+                    location.reload();
+                }
+            });
 
-        @foreach (Squad s in Model)
-        {
-            <tr>
-                <td><a>@Html.ActionLink("Details", "Details","Squad", new { id =  s.SquadId})</a></td>
-              @*  <td>@s.User.Name  @s.User.Surname</td>*@
-                <td>@s.GameWeek</td>
-            </tr>
         }
-
-    </tbody>
-</table>
+    </script>
+}

@@ -1,0 +1,29 @@
+﻿.grass {
+    background: url("https://fantasy.premierleague.com/static/media/pitch-default.49da4402.svg") no-repeat fixed center;
+    width: 90%;
+    margin: auto;
+    border: 1px solid black;
+    /* height: 1000px; */
+}
+
+.player {
+    text-align: center;
+    font-size: 20px;
+}
+
+.row, .change {
+    display: flex;
+    justify-content: center;
+}
+
+.bench {
+    border-top: 5px solid black;
+}
+
+.change > * {
+    font-size: 30px;
+}
+
+.change {
+    text-align: center;
+}
