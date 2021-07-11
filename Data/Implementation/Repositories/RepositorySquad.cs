@@ -84,18 +84,31 @@ namespace Data.Implementation
             return context.Squads.Include(s => s.User).ToList();
         }
 
-        public Squad GetSquadForUser(int v)
+        public List<Squad> GetSquadByGW(int gw)
+        {
+            return context.Squads.Include(p => p.Players).Where(p => p.GameWeek == gw).ToList();
+        }
+
+        public Squad GetSquadForUser(int v, int gw)
         {
             try
             {
-                return context.Squads.Include(s => s.User).Include(p => p.Players).First(s => s.UserId == v);
+                return context.Squads.Include(s => s.User).Include(p => p.Players).First(s => s.UserId == v && s.GameWeek == gw);
             }
             catch (Exception)
             {
-                return null;
+                try
+                {
+                    return context.Squads.Include(s => s.User).Include(p => p.Players).First(s => s.UserId == v);
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
             }
-        
+
         }
+    
 
         public List<Squad> Search(Expression<Func<Squad, bool>> pred)
         {

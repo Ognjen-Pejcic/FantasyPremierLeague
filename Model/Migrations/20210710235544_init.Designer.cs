@@ -10,7 +10,7 @@ using Model;
 namespace Model.Migrations
 {
     [DbContext(typeof(FantasyContext))]
-    [Migration("20210710174124_init")]
+    [Migration("20210710235544_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -87,7 +87,7 @@ namespace Model.Migrations
                             PlayerId = 1,
                             Name = "Bernd",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Leno",
                             TeamID = 1
                         },
@@ -96,7 +96,7 @@ namespace Model.Migrations
                             PlayerId = 2,
                             Name = "Rúnar Alex",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Rúnarsson",
                             TeamID = 1
                         },
@@ -105,7 +105,7 @@ namespace Model.Migrations
                             PlayerId = 3,
                             Name = "Willian",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 11.0,
                             Surname = "Borges Da Silva",
                             TeamID = 1
                         },
@@ -114,7 +114,7 @@ namespace Model.Migrations
                             PlayerId = 4,
                             Name = "Pierre-Emerick",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 8.0,
                             Surname = "Aubameyang",
                             TeamID = 1
                         },
@@ -141,7 +141,7 @@ namespace Model.Migrations
                             PlayerId = 7,
                             Name = "Granit",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 7.0,
                             Surname = "Xhaka",
                             TeamID = 1
                         },
@@ -168,7 +168,7 @@ namespace Model.Migrations
                             PlayerId = 10,
                             Name = "Calum",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Chambers",
                             TeamID = 1
                         },
@@ -177,7 +177,7 @@ namespace Model.Migrations
                             PlayerId = 11,
                             Name = "Sead",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Kolasinac",
                             TeamID = 1
                         },
@@ -195,7 +195,7 @@ namespace Model.Migrations
                             PlayerId = 13,
                             Name = "Ainsley",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Maitland-Niles",
                             TeamID = 1
                         },
@@ -204,7 +204,7 @@ namespace Model.Migrations
                             PlayerId = 14,
                             Name = "Rob",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Holding",
                             TeamID = 1
                         },
@@ -213,7 +213,7 @@ namespace Model.Migrations
                             PlayerId = 15,
                             Name = "Thomas",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 11.0,
                             Surname = "Partey",
                             TeamID = 1
                         },
@@ -222,7 +222,7 @@ namespace Model.Migrations
                             PlayerId = 16,
                             Name = "Kieran",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Tierney",
                             TeamID = 1
                         },
@@ -231,7 +231,7 @@ namespace Model.Migrations
                             PlayerId = 17,
                             Name = "Nicolas",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 7.0,
                             Surname = "Pépé",
                             TeamID = 1
                         },
@@ -240,7 +240,7 @@ namespace Model.Migrations
                             PlayerId = 18,
                             Name = "Lucas",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Torreira",
                             TeamID = 1
                         },
@@ -249,7 +249,7 @@ namespace Model.Migrations
                             PlayerId = 19,
                             Name = "Joseph",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 6.0,
                             Surname = "Willock",
                             TeamID = 1
                         },
@@ -258,7 +258,7 @@ namespace Model.Migrations
                             PlayerId = 20,
                             Name = "Edward",
                             Position = 4,
-                            Price = 9.0,
+                            Price = 10.0,
                             Surname = "Nketiah",
                             TeamID = 1
                         },
@@ -267,7 +267,7 @@ namespace Model.Migrations
                             PlayerId = 21,
                             Name = "Emile",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 11.0,
                             Surname = "Smith Rowe",
                             TeamID = 1
                         },
@@ -276,7 +276,7 @@ namespace Model.Migrations
                             PlayerId = 22,
                             Name = "Bukayo",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 9.0,
                             Surname = "Saka",
                             TeamID = 1
                         },
@@ -285,7 +285,7 @@ namespace Model.Migrations
                             PlayerId = 23,
                             Name = "Gabriel",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Magalhães",
                             TeamID = 1
                         },
@@ -294,7 +294,7 @@ namespace Model.Migrations
                             PlayerId = 24,
                             Name = "Konstantinos",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Mavropanos",
                             TeamID = 1
                         },
@@ -303,7 +303,7 @@ namespace Model.Migrations
                             PlayerId = 25,
                             Name = "Mattéo",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 10.0,
                             Surname = "Guendouzi",
                             TeamID = 1
                         },
@@ -312,7 +312,7 @@ namespace Model.Migrations
                             PlayerId = 26,
                             Name = "Gabriel Teodoro",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 9.0,
                             Surname = "Martinelli Silva",
                             TeamID = 1
                         },
@@ -339,7 +339,7 @@ namespace Model.Migrations
                             PlayerId = 29,
                             Name = "Conor",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 5.0,
                             Surname = "Hourihane",
                             TeamID = 2
                         },
@@ -348,7 +348,7 @@ namespace Model.Migrations
                             PlayerId = 30,
                             Name = "Emiliano",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Martínez",
                             TeamID = 2
                         },
@@ -366,7 +366,7 @@ namespace Model.Migrations
                             PlayerId = 32,
                             Name = "Bertrand",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Traoré",
                             TeamID = 2
                         },
@@ -375,7 +375,7 @@ namespace Model.Migrations
                             PlayerId = 33,
                             Name = "Jack",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "Grealish",
                             TeamID = 2
                         },
@@ -393,7 +393,7 @@ namespace Model.Migrations
                             PlayerId = 35,
                             Name = "John",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "McGinn",
                             TeamID = 2
                         },
@@ -402,7 +402,7 @@ namespace Model.Migrations
                             PlayerId = 36,
                             Name = "Kortney",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Hause",
                             TeamID = 2
                         },
@@ -411,7 +411,7 @@ namespace Model.Migrations
                             PlayerId = 37,
                             Name = "Mahmoud Ahmed",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 6.0,
                             Surname = "Ibrahim Hassan",
                             TeamID = 2
                         },
@@ -420,7 +420,7 @@ namespace Model.Migrations
                             PlayerId = 38,
                             Name = "Tyrone",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Mings",
                             TeamID = 2
                         },
@@ -429,7 +429,7 @@ namespace Model.Migrations
                             PlayerId = 39,
                             Name = "Matt",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Targett",
                             TeamID = 2
                         },
@@ -438,7 +438,7 @@ namespace Model.Migrations
                             PlayerId = 40,
                             Name = "Ollie",
                             Position = 4,
-                            Price = 9.0,
+                            Price = 10.0,
                             Surname = "Watkins",
                             TeamID = 2
                         },
@@ -447,7 +447,7 @@ namespace Model.Migrations
                             PlayerId = 41,
                             Name = "Marvelous",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Nakamba",
                             TeamID = 2
                         },
@@ -456,7 +456,7 @@ namespace Model.Migrations
                             PlayerId = 42,
                             Name = "Anwar",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 7.0,
                             Surname = "El Ghazi",
                             TeamID = 2
                         },
@@ -465,7 +465,7 @@ namespace Model.Migrations
                             PlayerId = 43,
                             Name = "Emiliano",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 6.0,
                             Surname = "Buendía Stati",
                             TeamID = 2
                         },
@@ -474,7 +474,7 @@ namespace Model.Migrations
                             PlayerId = 44,
                             Name = "Matthew",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Cash",
                             TeamID = 2
                         },
@@ -492,7 +492,7 @@ namespace Model.Migrations
                             PlayerId = 46,
                             Name = "Frédéric",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Guilbert",
                             TeamID = 2
                         },
@@ -510,7 +510,7 @@ namespace Model.Migrations
                             PlayerId = 48,
                             Name = "Mbwana Ally",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 8.0,
                             Surname = "Samatta",
                             TeamID = 2
                         },
@@ -519,7 +519,7 @@ namespace Model.Migrations
                             PlayerId = 49,
                             Name = "Keinan",
                             Position = 4,
-                            Price = 9.0,
+                            Price = 7.0,
                             Surname = "Davis",
                             TeamID = 2
                         },
@@ -528,7 +528,7 @@ namespace Model.Migrations
                             PlayerId = 50,
                             Name = "Douglas Luiz",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 11.0,
                             Surname = "Soares de Paulo",
                             TeamID = 2
                         },
@@ -537,7 +537,7 @@ namespace Model.Migrations
                             PlayerId = 51,
                             Name = "Jacob",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 7.0,
                             Surname = "Ramsey",
                             TeamID = 2
                         },
@@ -546,7 +546,7 @@ namespace Model.Migrations
                             PlayerId = 52,
                             Name = "Ashley",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Young",
                             TeamID = 2
                         },
@@ -555,7 +555,7 @@ namespace Model.Migrations
                             PlayerId = 76,
                             Name = "Pontus",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Jansson",
                             TeamID = 3
                         },
@@ -564,7 +564,7 @@ namespace Model.Migrations
                             PlayerId = 77,
                             Name = "Christian",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 9.0,
                             Surname = "Nørgaard",
                             TeamID = 3
                         },
@@ -573,7 +573,7 @@ namespace Model.Migrations
                             PlayerId = 78,
                             Name = "Ivan",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Toney",
                             TeamID = 3
                         },
@@ -582,7 +582,7 @@ namespace Model.Migrations
                             PlayerId = 79,
                             Name = "Tariqe",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Fosu-Henry",
                             TeamID = 3
                         },
@@ -591,7 +591,7 @@ namespace Model.Migrations
                             PlayerId = 80,
                             Name = "David",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Raya Martin",
                             TeamID = 3
                         },
@@ -600,7 +600,7 @@ namespace Model.Migrations
                             PlayerId = 81,
                             Name = "Sergi",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 9.0,
                             Surname = "Canós",
                             TeamID = 3
                         },
@@ -627,7 +627,7 @@ namespace Model.Migrations
                             PlayerId = 84,
                             Name = "Vitaly",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 5.0,
                             Surname = "Janelt",
                             TeamID = 3
                         },
@@ -636,7 +636,7 @@ namespace Model.Migrations
                             PlayerId = 85,
                             Name = "Saman",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 9.0,
                             Surname = "Ghoddos",
                             TeamID = 3
                         },
@@ -645,7 +645,7 @@ namespace Model.Migrations
                             PlayerId = 86,
                             Name = "Mathias",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 9.0,
                             Surname = "Jensen",
                             TeamID = 3
                         },
@@ -654,7 +654,7 @@ namespace Model.Migrations
                             PlayerId = 87,
                             Name = "Charlie",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Goode",
                             TeamID = 3
                         },
@@ -663,7 +663,7 @@ namespace Model.Migrations
                             PlayerId = 88,
                             Name = "Marcus",
                             Position = 4,
-                            Price = 8.0,
+                            Price = 7.0,
                             Surname = "Forss",
                             TeamID = 3
                         },
@@ -690,7 +690,7 @@ namespace Model.Migrations
                             PlayerId = 91,
                             Name = "Ethan",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Pinnock",
                             TeamID = 3
                         },
@@ -708,7 +708,7 @@ namespace Model.Migrations
                             PlayerId = 93,
                             Name = "Jan",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 8.0,
                             Surname = "Zamburek",
                             TeamID = 3
                         },
@@ -726,7 +726,7 @@ namespace Model.Migrations
                             PlayerId = 95,
                             Name = "Halil",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 8.0,
                             Surname = "Dervişoğlu",
                             TeamID = 3
                         },
@@ -735,7 +735,7 @@ namespace Model.Migrations
                             PlayerId = 96,
                             Name = "Bryan",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 9.0,
                             Surname = "Mbeumo",
                             TeamID = 3
                         },
@@ -744,7 +744,7 @@ namespace Model.Migrations
                             PlayerId = 97,
                             Name = "Mads",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "Bidstrup",
                             TeamID = 3
                         },
@@ -753,7 +753,7 @@ namespace Model.Migrations
                             PlayerId = 53,
                             Name = "Adam",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 9.0,
                             Surname = "Lallana",
                             TeamID = 4
                         },
@@ -762,7 +762,7 @@ namespace Model.Migrations
                             PlayerId = 54,
                             Name = "Jason",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Steele",
                             TeamID = 4
                         },
@@ -780,7 +780,7 @@ namespace Model.Migrations
                             PlayerId = 56,
                             Name = "Shane",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Duffy",
                             TeamID = 4
                         },
@@ -798,7 +798,7 @@ namespace Model.Migrations
                             PlayerId = 58,
                             Name = "Dan",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Burn",
                             TeamID = 4
                         },
@@ -816,7 +816,7 @@ namespace Model.Migrations
                             PlayerId = 60,
                             Name = "Solomon",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 6.0,
                             Surname = "March",
                             TeamID = 4
                         },
@@ -825,7 +825,7 @@ namespace Model.Migrations
                             PlayerId = 61,
                             Name = "Adam",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Webster",
                             TeamID = 4
                         },
@@ -843,7 +843,7 @@ namespace Model.Migrations
                             PlayerId = 63,
                             Name = "Neal",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Maupay",
                             TeamID = 4
                         },
@@ -852,7 +852,7 @@ namespace Model.Migrations
                             PlayerId = 64,
                             Name = "Leandro",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 8.0,
                             Surname = "Trossard",
                             TeamID = 4
                         },
@@ -861,7 +861,7 @@ namespace Model.Migrations
                             PlayerId = 65,
                             Name = "Mathew",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Ryan",
                             TeamID = 4
                         },
@@ -870,7 +870,7 @@ namespace Model.Migrations
                             PlayerId = 66,
                             Name = "Alireza",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "Jahanbakhsh",
                             TeamID = 4
                         },
@@ -879,7 +879,7 @@ namespace Model.Migrations
                             PlayerId = 67,
                             Name = "Ben",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "White",
                             TeamID = 4
                         },
@@ -888,7 +888,7 @@ namespace Model.Migrations
                             PlayerId = 68,
                             Name = "Bernardo",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Fernandes Da Silva Junior",
                             TeamID = 4
                         },
@@ -897,7 +897,7 @@ namespace Model.Migrations
                             PlayerId = 69,
                             Name = "Robert",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Sánchez",
                             TeamID = 4
                         },
@@ -906,7 +906,7 @@ namespace Model.Migrations
                             PlayerId = 70,
                             Name = "Yves",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 6.0,
                             Surname = "Bissouma",
                             TeamID = 4
                         },
@@ -915,7 +915,7 @@ namespace Model.Migrations
                             PlayerId = 71,
                             Name = "Tariq",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Lamptey",
                             TeamID = 4
                         },
@@ -924,7 +924,7 @@ namespace Model.Migrations
                             PlayerId = 72,
                             Name = "Aaron",
                             Position = 4,
-                            Price = 8.0,
+                            Price = 11.0,
                             Surname = "Connolly",
                             TeamID = 4
                         },
@@ -933,7 +933,7 @@ namespace Model.Migrations
                             PlayerId = 73,
                             Name = "Steven",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 7.0,
                             Surname = "Alzate",
                             TeamID = 4
                         },
@@ -951,7 +951,7 @@ namespace Model.Migrations
                             PlayerId = 75,
                             Name = "Jakub",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 7.0,
                             Surname = "Moder",
                             TeamID = 4
                         },
@@ -969,7 +969,7 @@ namespace Model.Migrations
                             PlayerId = 462,
                             Name = "Enock",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 9.0,
                             Surname = "Mwepu",
                             TeamID = 4
                         },
@@ -978,7 +978,7 @@ namespace Model.Migrations
                             PlayerId = 98,
                             Name = "James",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Tarkowski",
                             TeamID = 5
                         },
@@ -996,7 +996,7 @@ namespace Model.Migrations
                             PlayerId = 100,
                             Name = "Erik",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Pieters",
                             TeamID = 5
                         },
@@ -1005,7 +1005,7 @@ namespace Model.Migrations
                             PlayerId = 101,
                             Name = "Jack",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "Cork",
                             TeamID = 5
                         },
@@ -1023,7 +1023,7 @@ namespace Model.Migrations
                             PlayerId = 103,
                             Name = "Kevin",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Long",
                             TeamID = 5
                         },
@@ -1032,7 +1032,7 @@ namespace Model.Migrations
                             PlayerId = 104,
                             Name = "Jay",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Rodriguez",
                             TeamID = 5
                         },
@@ -1041,7 +1041,7 @@ namespace Model.Migrations
                             PlayerId = 105,
                             Name = "Ashley",
                             Position = 4,
-                            Price = 9.0,
+                            Price = 11.0,
                             Surname = "Barnes",
                             TeamID = 5
                         },
@@ -1050,7 +1050,7 @@ namespace Model.Migrations
                             PlayerId = 106,
                             Name = "Ben",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Mee",
                             TeamID = 5
                         },
@@ -1059,7 +1059,7 @@ namespace Model.Migrations
                             PlayerId = 107,
                             Name = "Ashley",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 9.0,
                             Surname = "Westwood",
                             TeamID = 5
                         },
@@ -1068,7 +1068,7 @@ namespace Model.Migrations
                             PlayerId = 108,
                             Name = "Johann Berg",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Gudmundsson",
                             TeamID = 5
                         },
@@ -1077,7 +1077,7 @@ namespace Model.Migrations
                             PlayerId = 109,
                             Name = "Chris",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 7.0,
                             Surname = "Wood",
                             TeamID = 5
                         },
@@ -1095,7 +1095,7 @@ namespace Model.Migrations
                             PlayerId = 111,
                             Name = "Matej",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Vydra",
                             TeamID = 5
                         },
@@ -1104,7 +1104,7 @@ namespace Model.Migrations
                             PlayerId = 112,
                             Name = "Nick",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Pope",
                             TeamID = 5
                         },
@@ -1113,7 +1113,7 @@ namespace Model.Migrations
                             PlayerId = 113,
                             Name = "Charlie",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Taylor",
                             TeamID = 5
                         },
@@ -1122,7 +1122,7 @@ namespace Model.Migrations
                             PlayerId = 114,
                             Name = "Will",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Norris",
                             TeamID = 5
                         },
@@ -1131,7 +1131,7 @@ namespace Model.Migrations
                             PlayerId = 115,
                             Name = "Josh",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 6.0,
                             Surname = "Brownhill",
                             TeamID = 5
                         },
@@ -1140,7 +1140,7 @@ namespace Model.Migrations
                             PlayerId = 116,
                             Name = "Josh",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 8.0,
                             Surname = "Benson",
                             TeamID = 5
                         },
@@ -1149,7 +1149,7 @@ namespace Model.Migrations
                             PlayerId = 117,
                             Name = "Bailey",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Peacock-Farrell",
                             TeamID = 5
                         },
@@ -1158,7 +1158,7 @@ namespace Model.Migrations
                             PlayerId = 118,
                             Name = "Dwight",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 7.0,
                             Surname = "McNeil",
                             TeamID = 5
                         },
@@ -1167,7 +1167,7 @@ namespace Model.Migrations
                             PlayerId = 451,
                             Name = "Nathan",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Collins",
                             TeamID = 5
                         },
@@ -1176,7 +1176,7 @@ namespace Model.Migrations
                             PlayerId = 119,
                             Name = "César",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Azpilicueta",
                             TeamID = 6
                         },
@@ -1194,7 +1194,7 @@ namespace Model.Migrations
                             PlayerId = 121,
                             Name = "Thiago",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Thiago",
                             TeamID = 6
                         },
@@ -1203,7 +1203,7 @@ namespace Model.Migrations
                             PlayerId = 122,
                             Name = "Marcos",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Alonso",
                             TeamID = 6
                         },
@@ -1212,7 +1212,7 @@ namespace Model.Migrations
                             PlayerId = 123,
                             Name = "Jorge Luiz",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 11.0,
                             Surname = "Frello Filho",
                             TeamID = 6
                         },
@@ -1221,7 +1221,7 @@ namespace Model.Migrations
                             PlayerId = 124,
                             Name = "Ross",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Barkley",
                             TeamID = 6
                         },
@@ -1230,7 +1230,7 @@ namespace Model.Migrations
                             PlayerId = 125,
                             Name = "Mateo",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Kovacic",
                             TeamID = 6
                         },
@@ -1239,7 +1239,7 @@ namespace Model.Migrations
                             PlayerId = 126,
                             Name = "Michy",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 10.0,
                             Surname = "Batshuayi",
                             TeamID = 6
                         },
@@ -1248,7 +1248,7 @@ namespace Model.Migrations
                             PlayerId = 127,
                             Name = "Antonio",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Rüdiger",
                             TeamID = 6
                         },
@@ -1275,7 +1275,7 @@ namespace Model.Migrations
                             PlayerId = 130,
                             Name = "N'Golo",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Kanté",
                             TeamID = 6
                         },
@@ -1284,7 +1284,7 @@ namespace Model.Migrations
                             PlayerId = 131,
                             Name = "Hakim",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 10.0,
                             Surname = "Ziyech",
                             TeamID = 6
                         },
@@ -1293,7 +1293,7 @@ namespace Model.Migrations
                             PlayerId = 132,
                             Name = "Ruben",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 10.0,
                             Surname = "Loftus-Cheek",
                             TeamID = 6
                         },
@@ -1302,7 +1302,7 @@ namespace Model.Migrations
                             PlayerId = 133,
                             Name = "Andreas",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Christensen",
                             TeamID = 6
                         },
@@ -1311,7 +1311,7 @@ namespace Model.Migrations
                             PlayerId = 134,
                             Name = "Timo",
                             Position = 4,
-                            Price = 8.0,
+                            Price = 11.0,
                             Surname = "Werner",
                             TeamID = 6
                         },
@@ -1320,7 +1320,7 @@ namespace Model.Migrations
                             PlayerId = 135,
                             Name = "Benjamin",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Chilwell",
                             TeamID = 6
                         },
@@ -1329,7 +1329,7 @@ namespace Model.Migrations
                             PlayerId = 136,
                             Name = "Tammy",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 9.0,
                             Surname = "Abraham",
                             TeamID = 6
                         },
@@ -1338,7 +1338,7 @@ namespace Model.Migrations
                             PlayerId = 137,
                             Name = "Christian",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 9.0,
                             Surname = "Pulisic",
                             TeamID = 6
                         },
@@ -1347,7 +1347,7 @@ namespace Model.Migrations
                             PlayerId = 138,
                             Name = "Mason",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 7.0,
                             Surname = "Mount",
                             TeamID = 6
                         },
@@ -1365,7 +1365,7 @@ namespace Model.Migrations
                             PlayerId = 140,
                             Name = "Callum",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 7.0,
                             Surname = "Hudson-Odoi",
                             TeamID = 6
                         },
@@ -1383,7 +1383,7 @@ namespace Model.Migrations
                             PlayerId = 142,
                             Name = "Reece",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "James",
                             TeamID = 6
                         },
@@ -1392,7 +1392,7 @@ namespace Model.Migrations
                             PlayerId = 143,
                             Name = "Edouard",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Mendy",
                             TeamID = 6
                         },
@@ -1401,7 +1401,7 @@ namespace Model.Migrations
                             PlayerId = 144,
                             Name = "Conor",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 5.0,
                             Surname = "Gallagher",
                             TeamID = 6
                         },
@@ -1428,7 +1428,7 @@ namespace Model.Migrations
                             PlayerId = 148,
                             Name = "James",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 8.0,
                             Surname = "McArthur",
                             TeamID = 7
                         },
@@ -1437,7 +1437,7 @@ namespace Model.Migrations
                             PlayerId = 149,
                             Name = "Christian",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Benteke",
                             TeamID = 7
                         },
@@ -1446,7 +1446,7 @@ namespace Model.Migrations
                             PlayerId = 150,
                             Name = "Cheikhou",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Kouyaté",
                             TeamID = 7
                         },
@@ -1455,7 +1455,7 @@ namespace Model.Migrations
                             PlayerId = 151,
                             Name = "Martin",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Kelly",
                             TeamID = 7
                         },
@@ -1464,7 +1464,7 @@ namespace Model.Migrations
                             PlayerId = 152,
                             Name = "Luka",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 11.0,
                             Surname = "Milivojevic",
                             TeamID = 7
                         },
@@ -1473,7 +1473,7 @@ namespace Model.Migrations
                             PlayerId = 153,
                             Name = "Jordan",
                             Position = 4,
-                            Price = 8.0,
+                            Price = 7.0,
                             Surname = "Ayew",
                             TeamID = 7
                         },
@@ -1482,7 +1482,7 @@ namespace Model.Migrations
                             PlayerId = 154,
                             Name = "Wilfried",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 9.0,
                             Surname = "Zaha",
                             TeamID = 7
                         },
@@ -1491,7 +1491,7 @@ namespace Model.Migrations
                             PlayerId = 155,
                             Name = "Jeffrey",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 5.0,
                             Surname = "Schlupp",
                             TeamID = 7
                         },
@@ -1509,7 +1509,7 @@ namespace Model.Migrations
                             PlayerId = 157,
                             Name = "Jairo",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 7.0,
                             Surname = "Riedewald",
                             TeamID = 7
                         },
@@ -1527,7 +1527,7 @@ namespace Model.Migrations
                             PlayerId = 159,
                             Name = "Jean-Philippe",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 7.0,
                             Surname = "Mateta",
                             TeamID = 7
                         },
@@ -1536,7 +1536,7 @@ namespace Model.Migrations
                             PlayerId = 160,
                             Name = "Eberechi",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 5.0,
                             Surname = "Eze",
                             TeamID = 7
                         },
@@ -1545,7 +1545,7 @@ namespace Model.Migrations
                             PlayerId = 161,
                             Name = "Nathan",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Ferguson",
                             TeamID = 7
                         },
@@ -1563,7 +1563,7 @@ namespace Model.Migrations
                             PlayerId = 464,
                             Name = "Michael",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Olise",
                             TeamID = 7
                         },
@@ -1572,7 +1572,7 @@ namespace Model.Migrations
                             PlayerId = 163,
                             Name = "Fabian",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Delph",
                             TeamID = 8
                         },
@@ -1581,7 +1581,7 @@ namespace Model.Migrations
                             PlayerId = 164,
                             Name = "Gylfi",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Sigurdsson",
                             TeamID = 8
                         },
@@ -1590,7 +1590,7 @@ namespace Model.Migrations
                             PlayerId = 165,
                             Name = "Seamus",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Coleman",
                             TeamID = 8
                         },
@@ -1599,7 +1599,7 @@ namespace Model.Migrations
                             PlayerId = 166,
                             Name = "James",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 8.0,
                             Surname = "Rodríguez",
                             TeamID = 8
                         },
@@ -1608,7 +1608,7 @@ namespace Model.Migrations
                             PlayerId = 167,
                             Name = "Bernard",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Anício Caldeira Duarte",
                             TeamID = 8
                         },
@@ -1644,7 +1644,7 @@ namespace Model.Migrations
                             PlayerId = 171,
                             Name = "Allan",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 5.0,
                             Surname = "Marques Loureiro",
                             TeamID = 8
                         },
@@ -1653,7 +1653,7 @@ namespace Model.Migrations
                             PlayerId = 172,
                             Name = "André Filipe",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 10.0,
                             Surname = "Tavares Gomes",
                             TeamID = 8
                         },
@@ -1662,7 +1662,7 @@ namespace Model.Migrations
                             PlayerId = 173,
                             Name = "Abdoulaye",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 10.0,
                             Surname = "Doucouré",
                             TeamID = 8
                         },
@@ -1671,7 +1671,7 @@ namespace Model.Migrations
                             PlayerId = 174,
                             Name = "Alex",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Iwobi",
                             TeamID = 8
                         },
@@ -1716,7 +1716,7 @@ namespace Model.Migrations
                             PlayerId = 179,
                             Name = "Ben",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Godfrey",
                             TeamID = 8
                         },
@@ -1725,7 +1725,7 @@ namespace Model.Migrations
                             PlayerId = 180,
                             Name = "Richarlison",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 9.0,
                             Surname = "de Andrade",
                             TeamID = 8
                         },
@@ -1743,7 +1743,7 @@ namespace Model.Migrations
                             PlayerId = 200,
                             Name = "Kasper",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Schmeichel",
                             TeamID = 9
                         },
@@ -1752,7 +1752,7 @@ namespace Model.Migrations
                             PlayerId = 201,
                             Name = "Jonny",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Evans",
                             TeamID = 9
                         },
@@ -1761,7 +1761,7 @@ namespace Model.Migrations
                             PlayerId = 202,
                             Name = "Marc",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Albrighton",
                             TeamID = 9
                         },
@@ -1770,7 +1770,7 @@ namespace Model.Migrations
                             PlayerId = 203,
                             Name = "Nampalys",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 7.0,
                             Surname = "Mendy",
                             TeamID = 9
                         },
@@ -1779,7 +1779,7 @@ namespace Model.Migrations
                             PlayerId = 204,
                             Name = "Danny",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Ward",
                             TeamID = 9
                         },
@@ -1788,7 +1788,7 @@ namespace Model.Migrations
                             PlayerId = 205,
                             Name = "Jamie",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Vardy",
                             TeamID = 9
                         },
@@ -1797,7 +1797,7 @@ namespace Model.Migrations
                             PlayerId = 206,
                             Name = "Dennis",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 7.0,
                             Surname = "Praet",
                             TeamID = 9
                         },
@@ -1806,7 +1806,7 @@ namespace Model.Migrations
                             PlayerId = 207,
                             Name = "Ricardo Domingos",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Barbosa Pereira",
                             TeamID = 9
                         },
@@ -1815,7 +1815,7 @@ namespace Model.Migrations
                             PlayerId = 208,
                             Name = "Daniel",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Amartey",
                             TeamID = 9
                         },
@@ -1824,7 +1824,7 @@ namespace Model.Migrations
                             PlayerId = 209,
                             Name = "Timothy",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Castagne",
                             TeamID = 9
                         },
@@ -1833,7 +1833,7 @@ namespace Model.Migrations
                             PlayerId = 210,
                             Name = "Youri",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 7.0,
                             Surname = "Tielemans",
                             TeamID = 9
                         },
@@ -1842,7 +1842,7 @@ namespace Model.Migrations
                             PlayerId = 211,
                             Name = "Ayoze",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 11.0,
                             Surname = "Pérez",
                             TeamID = 9
                         },
@@ -1851,7 +1851,7 @@ namespace Model.Migrations
                             PlayerId = 212,
                             Name = "James",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 8.0,
                             Surname = "Maddison",
                             TeamID = 9
                         },
@@ -1860,7 +1860,7 @@ namespace Model.Migrations
                             PlayerId = 213,
                             Name = "Kelechi",
                             Position = 4,
-                            Price = 9.0,
+                            Price = 7.0,
                             Surname = "Iheanacho",
                             TeamID = 9
                         },
@@ -1869,7 +1869,7 @@ namespace Model.Migrations
                             PlayerId = 214,
                             Name = "Hamza",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 9.0,
                             Surname = "Choudhury",
                             TeamID = 9
                         },
@@ -1878,7 +1878,7 @@ namespace Model.Migrations
                             PlayerId = 215,
                             Name = "Harvey",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Barnes",
                             TeamID = 9
                         },
@@ -1923,7 +1923,7 @@ namespace Model.Migrations
                             PlayerId = 220,
                             Name = "Wesley",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Fofana",
                             TeamID = 9
                         },
@@ -1932,7 +1932,7 @@ namespace Model.Migrations
                             PlayerId = 455,
                             Name = "Patson",
                             Position = 4,
-                            Price = 8.0,
+                            Price = 10.0,
                             Surname = "Daka",
                             TeamID = 9
                         },
@@ -1941,7 +1941,7 @@ namespace Model.Migrations
                             PlayerId = 458,
                             Name = "Boubakary",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 10.0,
                             Surname = "Soumaré",
                             TeamID = 9
                         },
@@ -1950,7 +1950,7 @@ namespace Model.Migrations
                             PlayerId = 182,
                             Name = "Pablo",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 5.0,
                             Surname = "Hernández Domínguez",
                             TeamID = 10
                         },
@@ -1968,7 +1968,7 @@ namespace Model.Migrations
                             PlayerId = 184,
                             Name = "Liam",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Cooper",
                             TeamID = 10
                         },
@@ -1977,7 +1977,7 @@ namespace Model.Migrations
                             PlayerId = 185,
                             Name = "Luke",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Ayling",
                             TeamID = 10
                         },
@@ -1986,7 +1986,7 @@ namespace Model.Migrations
                             PlayerId = 186,
                             Name = "Mateusz",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 10.0,
                             Surname = "Klich",
                             TeamID = 10
                         },
@@ -1995,7 +1995,7 @@ namespace Model.Migrations
                             PlayerId = 187,
                             Name = "Rodrigo",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Moreno",
                             TeamID = 10
                         },
@@ -2004,7 +2004,7 @@ namespace Model.Migrations
                             PlayerId = 188,
                             Name = "Stuart",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 9.0,
                             Surname = "Dallas",
                             TeamID = 10
                         },
@@ -2013,7 +2013,7 @@ namespace Model.Migrations
                             PlayerId = 189,
                             Name = "Patrick",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 11.0,
                             Surname = "Bamford",
                             TeamID = 10
                         },
@@ -2022,7 +2022,7 @@ namespace Model.Migrations
                             PlayerId = 190,
                             Name = "Diego",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Llorente",
                             TeamID = 10
                         },
@@ -2031,7 +2031,7 @@ namespace Model.Migrations
                             PlayerId = 191,
                             Name = "Kalvin",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 7.0,
                             Surname = "Phillips",
                             TeamID = 10
                         },
@@ -2040,7 +2040,7 @@ namespace Model.Migrations
                             PlayerId = 192,
                             Name = "Hélder Wander",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 5.0,
                             Surname = "Sousa de Azevedo e Costa",
                             TeamID = 10
                         },
@@ -2049,7 +2049,7 @@ namespace Model.Migrations
                             PlayerId = 193,
                             Name = "Tyler",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Roberts",
                             TeamID = 10
                         },
@@ -2067,7 +2067,7 @@ namespace Model.Migrations
                             PlayerId = 195,
                             Name = "Ian Carlo",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 11.0,
                             Surname = "Poveda-Ocampo",
                             TeamID = 10
                         },
@@ -2076,7 +2076,7 @@ namespace Model.Migrations
                             PlayerId = 196,
                             Name = "Raphael",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 11.0,
                             Surname = "Dias Belloli",
                             TeamID = 10
                         },
@@ -2085,7 +2085,7 @@ namespace Model.Migrations
                             PlayerId = 197,
                             Name = "Jamie",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 6.0,
                             Surname = "Shackleton",
                             TeamID = 10
                         },
@@ -2103,7 +2103,7 @@ namespace Model.Migrations
                             PlayerId = 199,
                             Name = "Illan",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Meslier",
                             TeamID = 10
                         },
@@ -2112,7 +2112,7 @@ namespace Model.Migrations
                             PlayerId = 267,
                             Name = "Jack",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 5.0,
                             Surname = "Harrison",
                             TeamID = 10
                         },
@@ -2121,7 +2121,7 @@ namespace Model.Migrations
                             PlayerId = 463,
                             Name = "Héctor Junior",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Firpo Adames",
                             TeamID = 10
                         },
@@ -2130,7 +2130,7 @@ namespace Model.Migrations
                             PlayerId = 221,
                             Name = "James",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 11.0,
                             Surname = "Milner",
                             TeamID = 11
                         },
@@ -2139,7 +2139,7 @@ namespace Model.Migrations
                             PlayerId = 222,
                             Name = "Jordan",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 8.0,
                             Surname = "Henderson",
                             TeamID = 11
                         },
@@ -2148,7 +2148,7 @@ namespace Model.Migrations
                             PlayerId = 223,
                             Name = "Adrián",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "San Miguel del Castillo",
                             TeamID = 11
                         },
@@ -2175,7 +2175,7 @@ namespace Model.Migrations
                             PlayerId = 226,
                             Name = "Xherdan",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 5.0,
                             Surname = "Shaqiri",
                             TeamID = 11
                         },
@@ -2184,7 +2184,7 @@ namespace Model.Migrations
                             PlayerId = 227,
                             Name = "Alex",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 6.0,
                             Surname = "Oxlade-Chamberlain",
                             TeamID = 11
                         },
@@ -2202,7 +2202,7 @@ namespace Model.Migrations
                             PlayerId = 229,
                             Name = "Virgil",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "van Dijk",
                             TeamID = 11
                         },
@@ -2211,7 +2211,7 @@ namespace Model.Migrations
                             PlayerId = 230,
                             Name = "Sadio",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 9.0,
                             Surname = "Mané",
                             TeamID = 11
                         },
@@ -2220,7 +2220,7 @@ namespace Model.Migrations
                             PlayerId = 231,
                             Name = "Alisson",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Ramses Becker",
                             TeamID = 11
                         },
@@ -2229,7 +2229,7 @@ namespace Model.Migrations
                             PlayerId = 232,
                             Name = "Fabio Henrique",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 9.0,
                             Surname = "Tavares",
                             TeamID = 11
                         },
@@ -2238,7 +2238,7 @@ namespace Model.Migrations
                             PlayerId = 233,
                             Name = "Mohamed",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 11.0,
                             Surname = "Salah",
                             TeamID = 11
                         },
@@ -2256,7 +2256,7 @@ namespace Model.Migrations
                             PlayerId = 235,
                             Name = "Divock",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 7.0,
                             Surname = "Origi",
                             TeamID = 11
                         },
@@ -2265,7 +2265,7 @@ namespace Model.Migrations
                             PlayerId = 236,
                             Name = "Takumi",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 5.0,
                             Surname = "Minamino",
                             TeamID = 11
                         },
@@ -2274,7 +2274,7 @@ namespace Model.Migrations
                             PlayerId = 237,
                             Name = "Trent",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Alexander-Arnold",
                             TeamID = 11
                         },
@@ -2283,7 +2283,7 @@ namespace Model.Migrations
                             PlayerId = 238,
                             Name = "Joseph",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Gomez",
                             TeamID = 11
                         },
@@ -2292,7 +2292,7 @@ namespace Model.Migrations
                             PlayerId = 239,
                             Name = "Naby",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 6.0,
                             Surname = "Keita",
                             TeamID = 11
                         },
@@ -2301,7 +2301,7 @@ namespace Model.Migrations
                             PlayerId = 240,
                             Name = "Diogo",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Jota",
                             TeamID = 11
                         },
@@ -2319,7 +2319,7 @@ namespace Model.Migrations
                             PlayerId = 242,
                             Name = "Caoimhin",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Kelleher",
                             TeamID = 11
                         },
@@ -2328,7 +2328,7 @@ namespace Model.Migrations
                             PlayerId = 243,
                             Name = "Ibrahima",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Konaté",
                             TeamID = 11
                         },
@@ -2337,7 +2337,7 @@ namespace Model.Migrations
                             PlayerId = 244,
                             Name = "Curtis",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 7.0,
                             Surname = "Jones",
                             TeamID = 11
                         },
@@ -2346,7 +2346,7 @@ namespace Model.Migrations
                             PlayerId = 245,
                             Name = "Konstantinos",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Tsimikas",
                             TeamID = 11
                         },
@@ -2355,7 +2355,7 @@ namespace Model.Migrations
                             PlayerId = 246,
                             Name = "Neco",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Williams",
                             TeamID = 11
                         },
@@ -2364,7 +2364,7 @@ namespace Model.Migrations
                             PlayerId = 247,
                             Name = "Rhys",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Williams",
                             TeamID = 11
                         },
@@ -2373,7 +2373,7 @@ namespace Model.Migrations
                             PlayerId = 248,
                             Name = "Ben",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Davies",
                             TeamID = 11
                         },
@@ -2382,7 +2382,7 @@ namespace Model.Migrations
                             PlayerId = 249,
                             Name = "Kyle",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Walker",
                             TeamID = 12
                         },
@@ -2391,7 +2391,7 @@ namespace Model.Migrations
                             PlayerId = 250,
                             Name = "Ilkay",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 8.0,
                             Surname = "Gündogan",
                             TeamID = 12
                         },
@@ -2400,7 +2400,7 @@ namespace Model.Migrations
                             PlayerId = 251,
                             Name = "Kevin",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 5.0,
                             Surname = "De Bruyne",
                             TeamID = 12
                         },
@@ -2409,7 +2409,7 @@ namespace Model.Migrations
                             PlayerId = 252,
                             Name = "John",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Stones",
                             TeamID = 12
                         },
@@ -2427,7 +2427,7 @@ namespace Model.Migrations
                             PlayerId = 254,
                             Name = "Riyad",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Mahrez",
                             TeamID = 12
                         },
@@ -2436,7 +2436,7 @@ namespace Model.Migrations
                             PlayerId = 255,
                             Name = "Raheem",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 8.0,
                             Surname = "Sterling",
                             TeamID = 12
                         },
@@ -2445,7 +2445,7 @@ namespace Model.Migrations
                             PlayerId = 256,
                             Name = "João Pedro Cavaco",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Cancelo",
                             TeamID = 12
                         },
@@ -2454,7 +2454,7 @@ namespace Model.Migrations
                             PlayerId = 257,
                             Name = "Ederson",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Santana de Moraes",
                             TeamID = 12
                         },
@@ -2463,7 +2463,7 @@ namespace Model.Migrations
                             PlayerId = 258,
                             Name = "Nathan",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Aké",
                             TeamID = 12
                         },
@@ -2472,7 +2472,7 @@ namespace Model.Migrations
                             PlayerId = 259,
                             Name = "Aymeric",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Laporte",
                             TeamID = 12
                         },
@@ -2481,7 +2481,7 @@ namespace Model.Migrations
                             PlayerId = 260,
                             Name = "Zack",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Steffen",
                             TeamID = 12
                         },
@@ -2508,7 +2508,7 @@ namespace Model.Migrations
                             PlayerId = 263,
                             Name = "Gabriel Fernando",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "de Jesus",
                             TeamID = 12
                         },
@@ -2526,7 +2526,7 @@ namespace Model.Migrations
                             PlayerId = 265,
                             Name = "Phil",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 8.0,
                             Surname = "Foden",
                             TeamID = 12
                         },
@@ -2553,7 +2553,7 @@ namespace Model.Migrations
                             PlayerId = 453,
                             Name = "Fernando",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 8.0,
                             Surname = "Luiz Rosa",
                             TeamID = 12
                         },
@@ -2562,7 +2562,7 @@ namespace Model.Migrations
                             PlayerId = 269,
                             Name = "Edinson",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Cavani",
                             TeamID = 13
                         },
@@ -2580,7 +2580,7 @@ namespace Model.Migrations
                             PlayerId = 271,
                             Name = "Nemanja",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 5.0,
                             Surname = "Matic",
                             TeamID = 13
                         },
@@ -2589,7 +2589,7 @@ namespace Model.Migrations
                             PlayerId = 272,
                             Name = "Paul",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 6.0,
                             Surname = "Pogba",
                             TeamID = 13
                         },
@@ -2607,7 +2607,7 @@ namespace Model.Migrations
                             PlayerId = 274,
                             Name = "Frederico",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Rodrigues de Paula Santos",
                             TeamID = 13
                         },
@@ -2616,7 +2616,7 @@ namespace Model.Migrations
                             PlayerId = 275,
                             Name = "Luke",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Shaw",
                             TeamID = 13
                         },
@@ -2625,7 +2625,7 @@ namespace Model.Migrations
                             PlayerId = 276,
                             Name = "Jesse",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 7.0,
                             Surname = "Lingard",
                             TeamID = 13
                         },
@@ -2634,7 +2634,7 @@ namespace Model.Migrations
                             PlayerId = 277,
                             Name = "Bruno Miguel",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 7.0,
                             Surname = "Borges Fernandes",
                             TeamID = 13
                         },
@@ -2661,7 +2661,7 @@ namespace Model.Migrations
                             PlayerId = 280,
                             Name = "Dean",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Henderson",
                             TeamID = 13
                         },
@@ -2670,7 +2670,7 @@ namespace Model.Migrations
                             PlayerId = 281,
                             Name = "Marcus",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 11.0,
                             Surname = "Rashford",
                             TeamID = 13
                         },
@@ -2679,7 +2679,7 @@ namespace Model.Migrations
                             PlayerId = 282,
                             Name = "Donny",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "van de Beek",
                             TeamID = 13
                         },
@@ -2688,7 +2688,7 @@ namespace Model.Migrations
                             PlayerId = 283,
                             Name = "Axel",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Tuanzebe",
                             TeamID = 13
                         },
@@ -2706,7 +2706,7 @@ namespace Model.Migrations
                             PlayerId = 285,
                             Name = "Scott",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "McTominay",
                             TeamID = 13
                         },
@@ -2724,7 +2724,7 @@ namespace Model.Migrations
                             PlayerId = 287,
                             Name = "Daniel",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 11.0,
                             Surname = "James",
                             TeamID = 13
                         },
@@ -2733,7 +2733,7 @@ namespace Model.Migrations
                             PlayerId = 288,
                             Name = "Aaron",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Wan-Bissaka",
                             TeamID = 13
                         },
@@ -2742,7 +2742,7 @@ namespace Model.Migrations
                             PlayerId = 289,
                             Name = "Mason",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 11.0,
                             Surname = "Greenwood",
                             TeamID = 13
                         },
@@ -2760,7 +2760,7 @@ namespace Model.Migrations
                             PlayerId = 459,
                             Name = "Juan",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 8.0,
                             Surname = "Mata",
                             TeamID = 13
                         },
@@ -2769,7 +2769,7 @@ namespace Model.Migrations
                             PlayerId = 291,
                             Name = "Jonjo",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 11.0,
                             Surname = "Shelvey",
                             TeamID = 14
                         },
@@ -2805,7 +2805,7 @@ namespace Model.Migrations
                             PlayerId = 295,
                             Name = "Martin",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Dubravka",
                             TeamID = 14
                         },
@@ -2823,7 +2823,7 @@ namespace Model.Migrations
                             PlayerId = 297,
                             Name = "Jeff",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 6.0,
                             Surname = "Hendrick",
                             TeamID = 14
                         },
@@ -2832,7 +2832,7 @@ namespace Model.Migrations
                             PlayerId = 298,
                             Name = "Ryan",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 9.0,
                             Surname = "Fraser",
                             TeamID = 14
                         },
@@ -2841,7 +2841,7 @@ namespace Model.Migrations
                             PlayerId = 299,
                             Name = "Jamaal",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Lascelles",
                             TeamID = 14
                         },
@@ -2850,7 +2850,7 @@ namespace Model.Migrations
                             PlayerId = 300,
                             Name = "Dwight",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 8.0,
                             Surname = "Gayle",
                             TeamID = 14
                         },
@@ -2877,7 +2877,7 @@ namespace Model.Migrations
                             PlayerId = 303,
                             Name = "Emil",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Krafth",
                             TeamID = 14
                         },
@@ -2886,7 +2886,7 @@ namespace Model.Migrations
                             PlayerId = 304,
                             Name = "Jacob",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 5.0,
                             Surname = "Murphy",
                             TeamID = 14
                         },
@@ -2895,7 +2895,7 @@ namespace Model.Migrations
                             PlayerId = 305,
                             Name = "Fabian",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Schär",
                             TeamID = 14
                         },
@@ -2904,7 +2904,7 @@ namespace Model.Migrations
                             PlayerId = 306,
                             Name = "Isaac",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 6.0,
                             Surname = "Hayden",
                             TeamID = 14
                         },
@@ -2913,7 +2913,7 @@ namespace Model.Migrations
                             PlayerId = 307,
                             Name = "Allan",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 9.0,
                             Surname = "Saint-Maximin",
                             TeamID = 14
                         },
@@ -2922,7 +2922,7 @@ namespace Model.Migrations
                             PlayerId = 308,
                             Name = "Miguel",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 9.0,
                             Surname = "Almirón",
                             TeamID = 14
                         },
@@ -2931,7 +2931,7 @@ namespace Model.Migrations
                             PlayerId = 309,
                             Name = "Sean",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 11.0,
                             Surname = "Longstaff",
                             TeamID = 14
                         },
@@ -2940,7 +2940,7 @@ namespace Model.Migrations
                             PlayerId = 310,
                             Name = "Joelinton Cássio",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Apolinário de Lira",
                             TeamID = 14
                         },
@@ -2958,7 +2958,7 @@ namespace Model.Migrations
                             PlayerId = 312,
                             Name = "Matthew",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 10.0,
                             Surname = "Longstaff",
                             TeamID = 14
                         },
@@ -2976,7 +2976,7 @@ namespace Model.Migrations
                             PlayerId = 145,
                             Name = "Billy",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Gilmour",
                             TeamID = 15
                         },
@@ -2985,7 +2985,7 @@ namespace Model.Migrations
                             PlayerId = 313,
                             Name = "Michael",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "McGovern",
                             TeamID = 15
                         },
@@ -3003,7 +3003,7 @@ namespace Model.Migrations
                             PlayerId = 315,
                             Name = "Teemu",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Pukki",
                             TeamID = 15
                         },
@@ -3012,7 +3012,7 @@ namespace Model.Migrations
                             PlayerId = 316,
                             Name = "Marco",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 10.0,
                             Surname = "Stiepermann",
                             TeamID = 15
                         },
@@ -3021,7 +3021,7 @@ namespace Model.Migrations
                             PlayerId = 317,
                             Name = "Lukas",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Rupp",
                             TeamID = 15
                         },
@@ -3030,7 +3030,7 @@ namespace Model.Migrations
                             PlayerId = 318,
                             Name = "Kenny",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 11.0,
                             Surname = "McLean",
                             TeamID = 15
                         },
@@ -3039,7 +3039,7 @@ namespace Model.Migrations
                             PlayerId = 319,
                             Name = "Grant",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Hanley",
                             TeamID = 15
                         },
@@ -3048,7 +3048,7 @@ namespace Model.Migrations
                             PlayerId = 320,
                             Name = "Onel",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "Hernández",
                             TeamID = 15
                         },
@@ -3057,7 +3057,7 @@ namespace Model.Migrations
                             PlayerId = 321,
                             Name = "Sam",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Byram",
                             TeamID = 15
                         },
@@ -3066,7 +3066,7 @@ namespace Model.Migrations
                             PlayerId = 322,
                             Name = "Jordan",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 10.0,
                             Surname = "Hugill",
                             TeamID = 15
                         },
@@ -3075,7 +3075,7 @@ namespace Model.Migrations
                             PlayerId = 323,
                             Name = "Kieran",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 10.0,
                             Surname = "Dowell",
                             TeamID = 15
                         },
@@ -3084,7 +3084,7 @@ namespace Model.Migrations
                             PlayerId = 324,
                             Name = "Christoph",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Zimmermann",
                             TeamID = 15
                         },
@@ -3093,7 +3093,7 @@ namespace Model.Migrations
                             PlayerId = 325,
                             Name = "Todd",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Cantwell",
                             TeamID = 15
                         },
@@ -3102,7 +3102,7 @@ namespace Model.Migrations
                             PlayerId = 326,
                             Name = "Max",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Aarons",
                             TeamID = 15
                         },
@@ -3129,7 +3129,7 @@ namespace Model.Migrations
                             PlayerId = 329,
                             Name = "Adam",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 11.0,
                             Surname = "Idah",
                             TeamID = 15
                         },
@@ -3138,7 +3138,7 @@ namespace Model.Migrations
                             PlayerId = 330,
                             Name = "Josh",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Martin",
                             TeamID = 15
                         },
@@ -3147,7 +3147,7 @@ namespace Model.Migrations
                             PlayerId = 331,
                             Name = "Andrew",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Omobamidele",
                             TeamID = 15
                         },
@@ -3165,7 +3165,7 @@ namespace Model.Migrations
                             PlayerId = 449,
                             Name = "Milot",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 9.0,
                             Surname = "Rashica",
                             TeamID = 15
                         },
@@ -3192,7 +3192,7 @@ namespace Model.Migrations
                             PlayerId = 332,
                             Name = "Theo",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 6.0,
                             Surname = "Walcott",
                             TeamID = 16
                         },
@@ -3201,7 +3201,7 @@ namespace Model.Migrations
                             PlayerId = 333,
                             Name = "Fraser",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Forster",
                             TeamID = 16
                         },
@@ -3219,7 +3219,7 @@ namespace Model.Migrations
                             PlayerId = 335,
                             Name = "Oriol",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Romeu Vidal",
                             TeamID = 16
                         },
@@ -3228,7 +3228,7 @@ namespace Model.Migrations
                             PlayerId = 336,
                             Name = "Nathan",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 5.0,
                             Surname = "Redmond",
                             TeamID = 16
                         },
@@ -3255,7 +3255,7 @@ namespace Model.Migrations
                             PlayerId = 339,
                             Name = "Stuart",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 5.0,
                             Surname = "Armstrong",
                             TeamID = 16
                         },
@@ -3264,7 +3264,7 @@ namespace Model.Migrations
                             PlayerId = 340,
                             Name = "Jannik",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Vestergaard",
                             TeamID = 16
                         },
@@ -3273,7 +3273,7 @@ namespace Model.Migrations
                             PlayerId = 341,
                             Name = "James",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Ward-Prowse",
                             TeamID = 16
                         },
@@ -3282,7 +3282,7 @@ namespace Model.Migrations
                             PlayerId = 342,
                             Name = "Kyle",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Walker-Peters",
                             TeamID = 16
                         },
@@ -3291,7 +3291,7 @@ namespace Model.Migrations
                             PlayerId = 343,
                             Name = "Jan",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Bednarek",
                             TeamID = 16
                         },
@@ -3309,7 +3309,7 @@ namespace Model.Migrations
                             PlayerId = 345,
                             Name = "Che",
                             Position = 4,
-                            Price = 8.0,
+                            Price = 11.0,
                             Surname = "Adams",
                             TeamID = 16
                         },
@@ -3318,7 +3318,7 @@ namespace Model.Migrations
                             PlayerId = 346,
                             Name = "Nathan",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Tella",
                             TeamID = 16
                         },
@@ -3336,7 +3336,7 @@ namespace Model.Migrations
                             PlayerId = 348,
                             Name = "Michael",
                             Position = 4,
-                            Price = 9.0,
+                            Price = 10.0,
                             Surname = "Obafemi",
                             TeamID = 16
                         },
@@ -3345,7 +3345,7 @@ namespace Model.Migrations
                             PlayerId = 349,
                             Name = "Ibrahima",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Diallo",
                             TeamID = 16
                         },
@@ -3354,7 +3354,7 @@ namespace Model.Migrations
                             PlayerId = 350,
                             Name = "Moussa",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 8.0,
                             Surname = "Djenepo",
                             TeamID = 16
                         },
@@ -3363,7 +3363,7 @@ namespace Model.Migrations
                             PlayerId = 351,
                             Name = "Mohammed",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Salisu",
                             TeamID = 16
                         },
@@ -3372,7 +3372,7 @@ namespace Model.Migrations
                             PlayerId = 460,
                             Name = "Romain",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Perraud",
                             TeamID = 16
                         },
@@ -3381,7 +3381,7 @@ namespace Model.Migrations
                             PlayerId = 352,
                             Name = "Joe",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Hart",
                             TeamID = 17
                         },
@@ -3390,7 +3390,7 @@ namespace Model.Migrations
                             PlayerId = 353,
                             Name = "Hugo",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Lloris",
                             TeamID = 17
                         },
@@ -3399,7 +3399,7 @@ namespace Model.Migrations
                             PlayerId = 354,
                             Name = "Moussa",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 5.0,
                             Surname = "Sissoko",
                             TeamID = 17
                         },
@@ -3408,7 +3408,7 @@ namespace Model.Migrations
                             PlayerId = 355,
                             Name = "Toby",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Alderweireld",
                             TeamID = 17
                         },
@@ -3426,7 +3426,7 @@ namespace Model.Migrations
                             PlayerId = 357,
                             Name = "Harry",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 8.0,
                             Surname = "Kane",
                             TeamID = 17
                         },
@@ -3453,7 +3453,7 @@ namespace Model.Migrations
                             PlayerId = 360,
                             Name = "Matt",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Doherty",
                             TeamID = 17
                         },
@@ -3462,7 +3462,7 @@ namespace Model.Migrations
                             PlayerId = 361,
                             Name = "Eric",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Dier",
                             TeamID = 17
                         },
@@ -3471,7 +3471,7 @@ namespace Model.Migrations
                             PlayerId = 362,
                             Name = "Lucas",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 7.0,
                             Surname = "Rodrigues Moura da Silva",
                             TeamID = 17
                         },
@@ -3480,7 +3480,7 @@ namespace Model.Migrations
                             PlayerId = 363,
                             Name = "Bamidele",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 9.0,
                             Surname = "Alli",
                             TeamID = 17
                         },
@@ -3498,7 +3498,7 @@ namespace Model.Migrations
                             PlayerId = 365,
                             Name = "Pierre-Emile",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Højbjerg",
                             TeamID = 17
                         },
@@ -3507,7 +3507,7 @@ namespace Model.Migrations
                             PlayerId = 366,
                             Name = "Harry",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 5.0,
                             Surname = "Winks",
                             TeamID = 17
                         },
@@ -3516,7 +3516,7 @@ namespace Model.Migrations
                             PlayerId = 367,
                             Name = "Davinson",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Sánchez",
                             TeamID = 17
                         },
@@ -3525,7 +3525,7 @@ namespace Model.Migrations
                             PlayerId = 368,
                             Name = "Ryan",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Sessegnon",
                             TeamID = 17
                         },
@@ -3534,7 +3534,7 @@ namespace Model.Migrations
                             PlayerId = 369,
                             Name = "Steven",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Bergwijn",
                             TeamID = 17
                         },
@@ -3552,7 +3552,7 @@ namespace Model.Migrations
                             PlayerId = 371,
                             Name = "Japhet",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Tanganga",
                             TeamID = 17
                         },
@@ -3561,7 +3561,7 @@ namespace Model.Migrations
                             PlayerId = 372,
                             Name = "Giovani",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 7.0,
                             Surname = "Lo Celso",
                             TeamID = 17
                         },
@@ -3570,7 +3570,7 @@ namespace Model.Migrations
                             PlayerId = 373,
                             Name = "Oliver",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 9.0,
                             Surname = "Skipp",
                             TeamID = 17
                         },
@@ -3579,7 +3579,7 @@ namespace Model.Migrations
                             PlayerId = 374,
                             Name = "Joe",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Rodon",
                             TeamID = 17
                         },
@@ -3588,7 +3588,7 @@ namespace Model.Migrations
                             PlayerId = 375,
                             Name = "Tanguy",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 9.0,
                             Surname = "Ndombele",
                             TeamID = 17
                         },
@@ -3597,7 +3597,7 @@ namespace Model.Migrations
                             PlayerId = 376,
                             Name = "Ben",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Foster",
                             TeamID = 18
                         },
@@ -3615,7 +3615,7 @@ namespace Model.Migrations
                             PlayerId = 378,
                             Name = "Dan",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 7.0,
                             Surname = "Gosling",
                             TeamID = 18
                         },
@@ -3624,7 +3624,7 @@ namespace Model.Migrations
                             PlayerId = 379,
                             Name = "Craig",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Cathcart",
                             TeamID = 18
                         },
@@ -3633,7 +3633,7 @@ namespace Model.Migrations
                             PlayerId = 380,
                             Name = "Troy",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Deeney",
                             TeamID = 18
                         },
@@ -3642,7 +3642,7 @@ namespace Model.Migrations
                             PlayerId = 381,
                             Name = "Tom",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 9.0,
                             Surname = "Cleverley",
                             TeamID = 18
                         },
@@ -3651,7 +3651,7 @@ namespace Model.Migrations
                             PlayerId = 382,
                             Name = "Francisco",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Femenía Far",
                             TeamID = 18
                         },
@@ -3660,7 +3660,7 @@ namespace Model.Migrations
                             PlayerId = 383,
                             Name = "Andre",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 10.0,
                             Surname = "Gray",
                             TeamID = 18
                         },
@@ -3669,7 +3669,7 @@ namespace Model.Migrations
                             PlayerId = 384,
                             Name = "Christian",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Kabasele",
                             TeamID = 18
                         },
@@ -3678,7 +3678,7 @@ namespace Model.Migrations
                             PlayerId = 385,
                             Name = "Nathaniel",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 9.0,
                             Surname = "Chalobah",
                             TeamID = 18
                         },
@@ -3687,7 +3687,7 @@ namespace Model.Migrations
                             PlayerId = 386,
                             Name = "Will",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 10.0,
                             Surname = "Hughes",
                             TeamID = 18
                         },
@@ -3705,7 +3705,7 @@ namespace Model.Migrations
                             PlayerId = 388,
                             Name = "Stipe",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 9.0,
                             Surname = "Perica",
                             TeamID = 18
                         },
@@ -3714,7 +3714,7 @@ namespace Model.Migrations
                             PlayerId = 389,
                             Name = "Daniel",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Bachmann",
                             TeamID = 18
                         },
@@ -3723,7 +3723,7 @@ namespace Model.Migrations
                             PlayerId = 390,
                             Name = "Adam",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Masina",
                             TeamID = 18
                         },
@@ -3732,7 +3732,7 @@ namespace Model.Migrations
                             PlayerId = 391,
                             Name = "Ken",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 6.0,
                             Surname = "Sema",
                             TeamID = 18
                         },
@@ -3750,7 +3750,7 @@ namespace Model.Migrations
                             PlayerId = 393,
                             Name = "Isaac",
                             Position = 4,
-                            Price = 9.0,
+                            Price = 7.0,
                             Surname = "Success Ajayi",
                             TeamID = 18
                         },
@@ -3768,7 +3768,7 @@ namespace Model.Migrations
                             PlayerId = 395,
                             Name = "Ashley",
                             Position = 4,
-                            Price = 7.0,
+                            Price = 11.0,
                             Surname = "Fletcher",
                             TeamID = 18
                         },
@@ -3777,7 +3777,7 @@ namespace Model.Migrations
                             PlayerId = 396,
                             Name = "Francisco",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Sierralta",
                             TeamID = 18
                         },
@@ -3786,7 +3786,7 @@ namespace Model.Migrations
                             PlayerId = 397,
                             Name = "Domingos",
                             Position = 3,
-                            Price = 5.0,
+                            Price = 7.0,
                             Surname = "Quina",
                             TeamID = 18
                         },
@@ -3804,7 +3804,7 @@ namespace Model.Migrations
                             PlayerId = 399,
                             Name = "Ismaila",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 8.0,
                             Surname = "Sarr",
                             TeamID = 18
                         },
@@ -3822,7 +3822,7 @@ namespace Model.Migrations
                             PlayerId = 401,
                             Name = "Ben",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Wilmot",
                             TeamID = 18
                         },
@@ -3831,7 +3831,7 @@ namespace Model.Migrations
                             PlayerId = 402,
                             Name = "Joseph",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 10.0,
                             Surname = "Hungbo",
                             TeamID = 18
                         },
@@ -3840,7 +3840,7 @@ namespace Model.Migrations
                             PlayerId = 403,
                             Name = "Imrân",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 9.0,
                             Surname = "Louza",
                             TeamID = 18
                         },
@@ -3849,7 +3849,7 @@ namespace Model.Migrations
                             PlayerId = 404,
                             Name = "João Pedro",
                             Position = 4,
-                            Price = 10.0,
+                            Price = 7.0,
                             Surname = "Junqueira de Jesus",
                             TeamID = 18
                         },
@@ -3858,7 +3858,7 @@ namespace Model.Migrations
                             PlayerId = 405,
                             Name = "Kwadwo",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 9.0,
                             Surname = "Baah",
                             TeamID = 18
                         },
@@ -3867,7 +3867,7 @@ namespace Model.Migrations
                             PlayerId = 450,
                             Name = "Emmanuel",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Dennis",
                             TeamID = 18
                         },
@@ -3885,7 +3885,7 @@ namespace Model.Migrations
                             PlayerId = 406,
                             Name = "Mark",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 8.0,
                             Surname = "Noble",
                             TeamID = 19
                         },
@@ -3894,7 +3894,7 @@ namespace Model.Migrations
                             PlayerId = 407,
                             Name = "Darren",
                             Position = 1,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Randolph",
                             TeamID = 19
                         },
@@ -3903,7 +3903,7 @@ namespace Model.Migrations
                             PlayerId = 408,
                             Name = "Lukasz",
                             Position = 1,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Fabianski",
                             TeamID = 19
                         },
@@ -3921,7 +3921,7 @@ namespace Model.Migrations
                             PlayerId = 410,
                             Name = "Winston",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 6.0,
                             Surname = "Reid",
                             TeamID = 19
                         },
@@ -3930,7 +3930,7 @@ namespace Model.Migrations
                             PlayerId = 411,
                             Name = "Aaron",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Cresswell",
                             TeamID = 19
                         },
@@ -3939,7 +3939,7 @@ namespace Model.Migrations
                             PlayerId = 412,
                             Name = "Andriy",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "Yarmolenko",
                             TeamID = 19
                         },
@@ -3957,7 +3957,7 @@ namespace Model.Migrations
                             PlayerId = 414,
                             Name = "Craig",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Dawson",
                             TeamID = 19
                         },
@@ -3966,7 +3966,7 @@ namespace Model.Migrations
                             PlayerId = 415,
                             Name = "Ryan",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 5.0,
                             Surname = "Fredericks",
                             TeamID = 19
                         },
@@ -3975,7 +3975,7 @@ namespace Model.Migrations
                             PlayerId = 416,
                             Name = "Manuel",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 10.0,
                             Surname = "Lanzini",
                             TeamID = 19
                         },
@@ -3984,7 +3984,7 @@ namespace Model.Migrations
                             PlayerId = 417,
                             Name = "Arthur",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Masuaku",
                             TeamID = 19
                         },
@@ -3993,7 +3993,7 @@ namespace Model.Migrations
                             PlayerId = 418,
                             Name = "Vladimir",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Coufal",
                             TeamID = 19
                         },
@@ -4002,7 +4002,7 @@ namespace Model.Migrations
                             PlayerId = 419,
                             Name = "Saïd",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Benrahma",
                             TeamID = 19
                         },
@@ -4011,7 +4011,7 @@ namespace Model.Migrations
                             PlayerId = 420,
                             Name = "Jarrod",
                             Position = 3,
-                            Price = 7.0,
+                            Price = 6.0,
                             Surname = "Bowen",
                             TeamID = 19
                         },
@@ -4020,7 +4020,7 @@ namespace Model.Migrations
                             PlayerId = 421,
                             Name = "Declan",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Rice",
                             TeamID = 19
                         },
@@ -4029,7 +4029,7 @@ namespace Model.Migrations
                             PlayerId = 422,
                             Name = "Tomas",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 5.0,
                             Surname = "Soucek",
                             TeamID = 19
                         },
@@ -4038,7 +4038,7 @@ namespace Model.Migrations
                             PlayerId = 423,
                             Name = "Pablo",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 10.0,
                             Surname = "Fornals",
                             TeamID = 19
                         },
@@ -4047,7 +4047,7 @@ namespace Model.Migrations
                             PlayerId = 424,
                             Name = "Issa",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Diop",
                             TeamID = 19
                         },
@@ -4056,7 +4056,7 @@ namespace Model.Migrations
                             PlayerId = 425,
                             Name = "Ben",
                             Position = 2,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Johnson",
                             TeamID = 19
                         },
@@ -4065,7 +4065,7 @@ namespace Model.Migrations
                             PlayerId = 426,
                             Name = "João Filipe Iria",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 9.0,
                             Surname = "Santos Moutinho",
                             TeamID = 20
                         },
@@ -4074,7 +4074,7 @@ namespace Model.Migrations
                             PlayerId = 427,
                             Name = "Rui Pedro",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "dos Santos Patrício",
                             TeamID = 20
                         },
@@ -4101,7 +4101,7 @@ namespace Model.Migrations
                             PlayerId = 430,
                             Name = "Raúl",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 10.0,
                             Surname = "Jiménez",
                             TeamID = 20
                         },
@@ -4110,7 +4110,7 @@ namespace Model.Migrations
                             PlayerId = 431,
                             Name = "Romain",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Saïss",
                             TeamID = 20
                         },
@@ -4119,7 +4119,7 @@ namespace Model.Migrations
                             PlayerId = 432,
                             Name = "Fernando",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 4.0,
                             Surname = "Marçal",
                             TeamID = 20
                         },
@@ -4137,7 +4137,7 @@ namespace Model.Migrations
                             PlayerId = 434,
                             Name = "Leander",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 8.0,
                             Surname = "Dendoncker",
                             TeamID = 20
                         },
@@ -4146,7 +4146,7 @@ namespace Model.Migrations
                             PlayerId = 435,
                             Name = "Adama",
                             Position = 3,
-                            Price = 9.0,
+                            Price = 7.0,
                             Surname = "Traoré",
                             TeamID = 20
                         },
@@ -4155,7 +4155,7 @@ namespace Model.Migrations
                             PlayerId = 436,
                             Name = "Rúben Diogo",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 8.0,
                             Surname = "da Silva Neves",
                             TeamID = 20
                         },
@@ -4173,7 +4173,7 @@ namespace Model.Migrations
                             PlayerId = 438,
                             Name = "Daniel",
                             Position = 3,
-                            Price = 6.0,
+                            Price = 9.0,
                             Surname = "Castelo Podence",
                             TeamID = 20
                         },
@@ -4182,7 +4182,7 @@ namespace Model.Migrations
                             PlayerId = 439,
                             Name = "Max",
                             Position = 2,
-                            Price = 6.0,
+                            Price = 5.0,
                             Surname = "Kilman",
                             TeamID = 20
                         },
@@ -4191,7 +4191,7 @@ namespace Model.Migrations
                             PlayerId = 440,
                             Name = "Morgan",
                             Position = 3,
-                            Price = 11.0,
+                            Price = 6.0,
                             Surname = "Gibbs-White",
                             TeamID = 20
                         },
@@ -4200,7 +4200,7 @@ namespace Model.Migrations
                             PlayerId = 441,
                             Name = "Pedro",
                             Position = 3,
-                            Price = 10.0,
+                            Price = 11.0,
                             Surname = "Lomba Neto",
                             TeamID = 20
                         },
@@ -4218,7 +4218,7 @@ namespace Model.Migrations
                             PlayerId = 443,
                             Name = "Ki-Jana",
                             Position = 2,
-                            Price = 4.0,
+                            Price = 6.0,
                             Surname = "Hoever",
                             TeamID = 20
                         },
@@ -4227,7 +4227,7 @@ namespace Model.Migrations
                             PlayerId = 444,
                             Name = "Andreas",
                             Position = 1,
-                            Price = 5.0,
+                            Price = 4.0,
                             Surname = "Söndergaard",
                             TeamID = 20
                         },
@@ -4236,7 +4236,7 @@ namespace Model.Migrations
                             PlayerId = 445,
                             Name = "Fabio",
                             Position = 4,
-                            Price = 11.0,
+                            Price = 8.0,
                             Surname = "Silva",
                             TeamID = 20
                         },
@@ -4263,7 +4263,7 @@ namespace Model.Migrations
                             PlayerId = 461,
                             Name = "Francisco",
                             Position = 3,
-                            Price = 8.0,
+                            Price = 11.0,
                             Surname = "Machado Mota de Castro Trincão",
                             TeamID = 20
                         });
@@ -4343,6 +4343,9 @@ namespace Model.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("GameWeek")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GameWeekPoints")
                         .HasColumnType("int");
 
                     b.Property<int>("ViceCaptain")

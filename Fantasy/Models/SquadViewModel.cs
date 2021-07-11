@@ -14,7 +14,14 @@ namespace Fantasy.Models
         public List<Player> AttackLine { get; set; }
         public List<Player> Bench { get; set; }
         public List<Player> StartLine { get; set; }
+
+        public List<PlayerGameStatistics> stats { get; set; }
         public int activePlayer { get; set; }
         public int benchedPlayer { get; set; }
+        public string TeamName { get; set; }
+        public int Gameweek { get; set; }
+        public int MaxGameWeek { get; set; }
+
+        public int GWPoints { get; set; }
     }
 }

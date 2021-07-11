@@ -9,6 +9,9 @@
         <input type="text" asp-for="Squad.UserId" />*@
     <label>Gameweek:</label>
     <input type="number" asp-for="Squad.GameWeek" />
+
+    
+
     @*<label>Players</label>
         <input type="number" asp-for="Players" />*@
     @*<label>Team:</label>
@@ -145,6 +148,7 @@
 
                 },
                 success: function (data) {
+
                     $('#players tbody').append(data);
 
                 }
@@ -162,10 +166,10 @@
                     $('#captain').append(data);
 
                     $('#vicecaptain').append(data);
-                    $('#benched1').append(data);
-                    $('#benched2').append(data);
-                    $('#benched3').append(data);
-                    $('#benched4').append(data);
+                    $('#bench1').append(data);
+                    $('#bench2').append(data);
+                    $('#bench3').append(data);
+                    $('#bench4').append(data);
 
                 }
              });
@@ -178,6 +182,18 @@
         });
         $("#captain").change(function () {
             $("#vcaptainT").val($(this).val());
+        });
+        $("#bench1").change(function () {
+            $("#becnhed1T").val($(this).val());
+        });
+        $("#bench2").change(function () {
+            $("#becnhed2T").val($(this).val());
+        });
+        $("#bench3").change(function () {
+            $("#becnhed3T").val($(this).val());
+        });
+        $("#bench4").change(function () {
+            $("#becnhed4T").val($(this).val());
         });
 
         $('#players').on('click', ".delete", function () {

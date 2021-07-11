@@ -1,0 +1,38 @@
+﻿
+@model Fantasy.Models.AddGameStatsViewModel
+<table class="table" id="players">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th hidden>Player id</th>
+            <th>Goals</th>
+            <th>Asisst</th>
+            <th>Yellow card</th>
+            <th>Red card</th>
+            <th>Minutes played</th>
+            <th>Clean sheet</th>
+            <th>Penalty missed</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        @for (int i=0;i<Model.Players.Count();i++)
+        {
+        <tr>
+            <td>@Model.Players[i].Name @Model.Players[i].Surname</td>
+            <td hidden><input asp-for="Stats[i].PlayerId" value="@Model.Players[i].PlayerId"/></td>
+            <td><input style="width:40px" value = "0" type="number"  asp-for="Stats[i].NumOfGoals" /></td>
+            <td><input style="width:40px" value = "0" type="number" asp-for="Stats[i].NumOfAssists"/></td>
+            <td><input style="width:40px" value = "0" type="checkbox" asp-for="Stats[i].YellowCard"/></td>
+            <td><input style="width:40px" value = "0" type="checkbox" asp-for="Stats[i].RedCard" /></td>
+            <td><input style="width:40px" value = "0" type="number" asp-for="Stats[i].MinutsPlayed"/></td>
+            <td><input style="width:40px" value = "0" type="checkbox" asp-for="Stats[i].CleanSheet"/></td>
+            <td><input style="width:40px" value = "0" type="number" asp-for="Stats[i].PenaltiesMissed"/></td>
+        </tr>
+        }
+
+    </tbody>
+    
+</table>
+
+

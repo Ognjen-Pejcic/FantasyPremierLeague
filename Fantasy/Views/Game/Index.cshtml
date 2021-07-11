@@ -1,0 +1,142 @@
+﻿@model Fantasy.Models.AddGameStatsViewModel
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h4>Game statistics</h4>
+<hr />
+<div class="row">
+
+    <form asp-controller="Game" asp-action="CreateGame">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-row">
+            <div class="form-group">
+                <label asp-for="Game.GameWeek" class="control-label"></label>
+                @if (ViewBag.Generated == true && ViewBag.Generated != null)
+                {
+                    <input asp-for="Game.GameWeek" class="form-control" value="@Model.Game.GameWeek" />
+                }
+                else
+                {
+                    <input asp-for="Game.GameWeek" class="form-control" />
+                }
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Home team</label>
+                @Html.DropDownList("Teams", Model.Teams, new { @class = "form-control", @id = "team-select" })
+                @if (ViewBag.Generated == true && ViewBag.Generated != null)
+                {
+                    <input id="id1" asp-for="Game.Home.ID" class="form-control" value="@Model.Game.Home.ID" />
+                }
+                else
+                {
+                    <input id="id1" hidden asp-for="Game.Home.ID" class="form-control" />
+                }
+            </div>
+            <div class="form-group">
+                <label class="control-label">Goals home</label>
+                @if (ViewBag.Generated == true && ViewBag.Generated != null)
+                {
+                    <input asp-for="Game.GoalsHomeTeam" class="form-control" value="@Model.Game.GoalsHomeTeam" />
+                }
+                else
+                {
+                    <input asp-for="Game.GoalsHomeTeam" class="form-control" />
+                }
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Goals away</label>
+                @if (ViewBag.Generated == true && ViewBag.Generated != null)
+                {
+                    <input asp-for="Game.GoalsAwayTeam" class="form-control" value="@Model.Game.GoalsAwayTeam" />
+                }
+                else
+                {
+                    <input asp-for="Game.GoalsAwayTeam" class="form-control" />
+
+                }
+            </div>
+            <div class="form-group">
+                <label class="control-label">Away team</label>
+                @Html.DropDownList("Teams", Model.Teams, new { @class = "form-control", @id = "team-select1" })
+                @if (ViewBag.Generated == true && ViewBag.Generated != null)
+                {
+                    <input id="id2" asp-for="Game.Away.ID" class="form-control" value="@Model.Game.Away.ID" />
+                }
+                else
+                {
+                    <input hidden id="id2" asp-for="Game.Away.ID" class="form-control" />
+                }
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-primary" id="generate">
+                    Generate game
+                </button>
+
+            </div>
+
+        </div>
+
+
+        @if (ViewBag.IsLoggedIn != null && ViewBag.IsLoggedIn)
+        {
+        }
+
+
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+
+        <div id="tablee">
+
+        </div>
+
+    </form>
+
+
+
+</div>
+
+@section Scripts
+{
+    <script>
+
+        $("#team-select").change(function () {
+            $("#id1").val($(this).val());
+        });
+        $("#team-select1").change(function () {
+            $("#id2").val($(this).val());
+        });
+
+
+
+        $('#generate').click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '@Url.ActionLink("Generate", "Game")',
+                method: 'post',
+                data: {
+
+                    HomeID: $('#id1').val(), AwayID: $('#id2').val()
+
+
+                },
+                success: function (data) {
+                    $('#tablee').empty();
+                    $('#tablee').append(data);
+
+                }
+            });
+        });
+
+
+
+
+      
+
+    </script>
+}

@@ -18,6 +18,8 @@ namespace Data.UnitOfWork
         public IRepositorySquad Squad { get; set; }
         public IRepositoryTeam Team { get ; set ; }
         public IRepositoryUser User { get; set; }
+        public IRepositoryGame Game { get; set; }
+        public IRepositoryStatistics Statistics { get; set; }
 
         //public IRepositoryPlayerSquadOption Players { get; set ; }
 
@@ -28,6 +30,8 @@ namespace Data.UnitOfWork
             Squad = new RepositorySquad(context);
             Team = new RepositoryTeam(context);
             User = new RepositoryUser(context);
+            Game = new RepositoryGame(context);
+            Statistics = new RepositoryStatistics(context);
         }
         public void Commit()
         {

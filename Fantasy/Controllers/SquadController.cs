@@ -28,26 +28,56 @@ namespace Fantasy.Views
         }
         // GET: SquadController
         public ActionResult Index()
-
         {
-
             int? userid = HttpContext.Session.GetInt32("userid");
             if (userid != null)
             {
                 ViewBag.IsLoggedIn = true;
-
             }
             else
             {
                 return RedirectToAction("Index", "User");
             }
 
-            IUnitOfWork uow = new FantasyUnitOfWork(new FantasyContext());
-            Squad squad = uow.Squad.GetSquadForUser((int)HttpContext.Session.GetInt32("userid"));
+         
+
+            if (HttpContext.Session.GetInt32("gw") == null)
+                HttpContext.Session.SetInt32("gw", FindCurrentGeamWeek());
+
+            Squad squad = unitOfWork.Squad.GetSquadForUser((int)HttpContext.Session.GetInt32("userid"), (int)HttpContext.Session.GetInt32("gw"));
             if (squad == null)
                 return RedirectToAction("Create", "Squad");
-            SquadViewModel svm = new SquadViewModel();
+            SquadViewModel svm = fillSquadViewModel(squad, unitOfWork);
+            svm.GWPoints = squad.GameWeekPoints;
+            svm.Gameweek = (int)HttpContext.Session.GetInt32("gw");
+            svm.MaxGameWeek = FindCurrentGeamWeek();
 
+            svm.stats = new List<PlayerGameStatistics>();
+            PlayerGameStatistics gk = unitOfWork.Statistics.GetbygwID(svm.Gameweek, svm.Goalkeeper.PlayerId);
+            svm.stats.Add(gk);
+
+            foreach(var item in svm.DefenderLine)
+            {
+                PlayerGameStatistics def = unitOfWork.Statistics.GetbygwID(svm.Gameweek, item.PlayerId);
+                svm.stats.Add(def);
+            }
+            foreach (var item in svm.MidfielderLine)
+            {
+                PlayerGameStatistics mid = unitOfWork.Statistics.GetbygwID(svm.Gameweek, item.PlayerId);
+                svm.stats.Add(mid);
+            }
+            foreach (var item in svm.AttackLine)
+            {
+                PlayerGameStatistics att = unitOfWork.Statistics.GetbygwID(svm.Gameweek, item.PlayerId);
+                svm.stats.Add(att);
+            }
+
+
+            return View(svm);
+        }
+        private SquadViewModel fillSquadViewModel(Squad squad, IUnitOfWork uow)
+        {
+            SquadViewModel svm = new SquadViewModel();
             svm.StartLine = squad.Players.FindAll(p => p.PlayerId != squad.Benched1 && p.PlayerId != squad.Benched2 && p.PlayerId != squad.Benched3 && p.PlayerId != squad.Benched4);
 
             svm.Goalkeeper = squad.Players.First(p => (int)p.Position == 1 && p.PlayerId != squad.Benched1
@@ -64,7 +94,33 @@ namespace Fantasy.Views
             svm.AttackLine = squad.Players.FindAll(p => (int)p.Position == 4 && p.PlayerId != squad.Benched1
             && p.PlayerId != squad.Benched2 && p.PlayerId != squad.Benched3 && p.PlayerId != squad.Benched4).ToList();
 
-            return View(svm);
+            svm.TeamName = uow.User.FindById((int)HttpContext.Session.GetInt32("userid")).TeamName;
+
+
+            return svm;
+        }
+
+        public ActionResult ChangeGameWeek(int gw)
+        {
+            HttpContext.Session.SetInt32("gw", gw);
+            return Index();
+        }
+        private int FindCurrentGeamWeek()
+        {
+            List<Squad> squads = unitOfWork.Squad.GetAll().ToList();
+            try
+            {
+                int gameweek = squads.Max(s => s.GameWeek);
+                if (gameweek != 0)
+                    return gameweek;
+                else return 1;
+            }
+            catch
+            {
+                return 1;
+            }
+           
+
         }
 
         // GET: SquadController/Details/5
@@ -91,7 +147,7 @@ namespace Fantasy.Views
             //List<PlayerSquadOption> players = unitOfWork.Players.GetAll();
             List<Player> players = unitOfWork.Player.GetAll();
 
-            List<SelectListItem> selectList = players.Select(s => new SelectListItem { Text = s.Name + " " + s.Surname + " | "  + s.Team.TeamName + " | $" + s.Price + " mill", Value = s.PlayerId.ToString() }).ToList();
+            List<SelectListItem> selectList = players.Select(s => new SelectListItem { Text = s.Name + " " + s.Surname + " | " +s.Position + " | " +s.Team.TeamName + " | $" + s.Price + " mill", Value = s.PlayerId.ToString() }).ToList();
 
 
             List<Player> playersG = unitOfWork.Player.Search(u=>u.Position==Position.GKP);
@@ -127,8 +183,8 @@ namespace Fantasy.Views
                 _notyf.Error("Squad must have 15 players");
                 return RedirectToAction("Create");
             }
-            List<Player> newpl = new List<Player>(); 
-            foreach(var item in model.Squad.Players)
+            List<Player> newpl = new List<Player>();
+            foreach (var item in model.Squad.Players)
             {
                 newpl.Add(unitOfWork.Player.FindById(item.PlayerId));
 
@@ -143,9 +199,26 @@ namespace Fantasy.Views
                 _notyf.Error("Squad must have 2 GKP, 5 DEF, 5 MID and 3 FWD");
                 return RedirectToAction("Create");
             }
+            int[] a =
+            {
+                model.Squad.Benched1 , model.Squad.Benched2 , model.Squad.Benched3, model.Squad.Benched4
+            };
+            if (a.Distinct().Count() != 4)
+            {
+                _notyf.Error("All benched players must be different");
+                return RedirectToAction("Create");
+            }
 
-
-
+            if (model.Squad.Captain == model.Squad.ViceCaptain)
+            {
+                _notyf.Error("Captain cannot be same as vice-captain");
+                return RedirectToAction("Create");
+            }
+            if (newpl.Sum(p => p.Price) > 100)
+            {
+                _notyf.Error("Your team price is over 100 mill");
+                return RedirectToAction("Create");
+            }
 
             try
             {
@@ -154,13 +227,14 @@ namespace Fantasy.Views
                 model.Squad.User = u;
                 unitOfWork.Squad.Add(model.Squad);
                 unitOfWork.Commit();
+                _notyf.Success("Squad saved");
                 return RedirectToAction("Index", "Player");
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, ex.Message);
 
-                return RedirectToAction("Create");
+                return RedirectToAction("Index");
             }
         }
 
@@ -226,8 +300,8 @@ namespace Fantasy.Views
         [HttpGet]
         public void CheckIfPlayersCouldRotate(int activePlayerId, int benchedPlayerId)
         {
-            Squad squad = unitOfWork.Squad.GetSquadForUser((int)HttpContext.Session.GetInt32("userid"));
-          
+            Squad squad = unitOfWork.Squad.GetSquadForUser((int)HttpContext.Session.GetInt32("userid"), (int)HttpContext.Session.GetInt32("gw"));
+
 
 
 
@@ -240,15 +314,15 @@ namespace Fantasy.Views
             else if (squad.Benched4 == benchedPlayerId)
                 squad.Benched4 = activePlayerId;
 
-            List<int> benched = new List<int> { (int)squad.Benched1 , (int)squad.Benched2, (int)squad.Benched3, (int)squad.Benched4 };
+            List<int> benched = new List<int> { (int)squad.Benched1, (int)squad.Benched2, (int)squad.Benched3, (int)squad.Benched4 };
 
             //cheking goalkeepers players
             //if (benched.Contains())
 
 
-                unitOfWork.Squad.Update(squad);
+            unitOfWork.Squad.Update(squad);
             unitOfWork.Commit();
-            
+
         }
 
         public ActionResult AddOption(PlayerViewModel model)

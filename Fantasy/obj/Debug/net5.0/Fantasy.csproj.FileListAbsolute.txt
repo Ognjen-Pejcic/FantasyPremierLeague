@@ -163,3 +163,5 @@ C:\Users\pejci\source\repos\Fantasy\Fantasy\bin\Debug\net5.0\Fantasy.StaticWebAs
 C:\Users\pejci\source\repos\Fantasy\Fantasy\bin\Debug\net5.0\AspNetCoreHero.ToastNotification.Views.dll
 C:\Users\pejci\source\repos\Fantasy\Fantasy\bin\Debug\net5.0\AspNetCoreHero.ToastNotification.dll
 C:\Users\pejci\source\repos\Fantasy\Fantasy\obj\Debug\net5.0\Fantasy.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pejci\source\repos\Fantasy\Fantasy\obj\Debug\net5.0\Razor\Views\Game\Index.cshtml.g.cs
+C:\Users\pejci\source\repos\Fantasy\Fantasy\obj\Debug\net5.0\Razor\Views\Shared\PlayersTableView.cshtml.g.cs

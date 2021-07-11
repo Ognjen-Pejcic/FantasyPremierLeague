@@ -7,15 +7,30 @@
 @section Style {
     <link rel="stylesheet" href="~/css/mySquadStyling.css" />
 }
-<h1>My squad</h1>
+<h1>@Model.TeamName</h1>
 
+
+<div>
+    Gameweek:
+    <select id="gw">
+
+        @for (int j = Model.MaxGameWeek; j > 0; j--)
+        {
+        <option value="@j">@j</option>
+        }
+    </select>
+    <button onclick="ChangeGameweek()">Change gameweek</button>
+</div>
+<p>Current gameweek is: <span id="currGW">@Model.Gameweek</span></p>
+<p>Points: <span id="currGW">@Model.GWPoints</span></p>
 <div class="grass">
     <div class="lineup">
         <div class="gk">
             <div class="row">
                 <div class="player" id="@Model.Goalkeeper.PlayerId">
                     <img src="/images/kit.png" alt="">
-                    <p>@Model.Goalkeeper.Name</p>
+                    <p>@Model.Goalkeeper.Name @Model.Goalkeeper.Surname</p>
+                    <p>@Model.stats[i++].Points</p>
                 </div>
             </div>
         </div>
@@ -23,10 +38,11 @@
             <div class="row">
                 @foreach (var item in Model.DefenderLine)
                 {
-                    <div class="player" id="@item.PlayerId">
-                        <img src="/images/kit.png" alt="">
-                        <p>@item.Name</p>
-                    </div>
+                <div class="player" id="@item.PlayerId">
+                    <img src="/images/kit.png" alt="">
+                    <p>@item.Name @item.Surname</p>
+                    <p>@Model.stats[i++].Points</p>
+                </div>
                 }
             </div>
         </div>
@@ -34,10 +50,11 @@
             <div class="row">
                 @foreach (var item in Model.MidfielderLine)
                 {
-                    <div class="player" id="@item.PlayerId">
-                        <img src="/images/kit.png" alt="">
-                        <p>@item.Name</p>
-                    </div>
+                <div class="player" id="@item.PlayerId">
+                    <img src="/images/kit.png" alt="">
+                    <p>@item.Name @item.Surname</p>
+                    <p>@Model.stats[i++].Points</p>
+                </div>
                 }
             </div>
         </div>
@@ -45,10 +62,11 @@
             <div class="row">
                 @foreach (var item in Model.AttackLine)
                 {
-                    <div class="player" id="@item.PlayerId">
-                        <img src="/images/kit.png" alt="">
-                        <p>@item.Name</p>
-                    </div>
+                <div class="player" id="@item.PlayerId">
+                    <img src="/images/kit.png" alt="">
+                    <p>@item.Name @item.Surname</p>
+                    <p>@Model.stats[i++].Points</p>
+                </div>
                 }
             </div>
         </div>
@@ -57,35 +75,58 @@
         <div class="row">
             @foreach (var item in Model.Bench)
             {
-                <div class="player" id="@item.PlayerId">
-                    <img src="/images/kit.png" alt="">
-                    <p>@item.Name</p>
-                </div>
+            <div class="player" id="@item.PlayerId">
+                <img src="/images/kit.png" alt="">
+                <p>@item.Name @item.Surname</p>
+           
+            </div>
             }
         </div>
     </div>
 </div>
-<p style="font-size: 20px;">Rotate player</p>
-<div class="change">
-    <div>
-        <p>Start linup</p>
-        <select id="in">
+<div class="c-vc">
+    <div class="c">
+        <p>Captain is:</p>
+        <select id="captain" onchange="checkPlayer()">
             @for (int j = 0; j < Model.StartLine.Count; j++)
             {
-                <option value="@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name</option>
+            <option value="c-@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
             }
         </select>
     </div>
-    <div>
-        <p>Reserves</p>
-        <select id="out">
-            @for (int j = Model.Bench.Count - 4; j < Model.Bench.Count; j++)
+    <div class="vc">
+        <p>Vice captain is:</p>
+        <select id="vice" onchange="checkPlayer()">
+            @for (int j = Model.StartLine.Count-1; j >= 0; j--)
             {
-                <option value="@Model.Bench[j].PlayerId">@Model.Bench[j].Name</option>
+            <option value="vc-@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
             }
         </select>
     </div>
-    <button onclick="Rotate()">Rotate</button>
+</div>
+<div id="below">
+    <p style="font-size: 20px;">Rotate player</p>
+    <div class="change">
+        <div>
+            <p>Start linup</p>
+            <select id="in">
+                @for (int j = 0; j < Model.StartLine.Count; j++)
+                {
+                <option value="@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
+                }
+            </select>
+        </div>
+        <div>
+            <p>Reserves</p>
+            <select id="out">
+                @for (int j = Model.Bench.Count - 4; j < Model.Bench.Count; j++)
+                {
+                <option value="@Model.Bench[j].PlayerId">@Model.Bench[j].Name @Model.Bench[j].Surname</option>
+                }
+            </select>
+        </div>
+        <button id="rotate" onclick="Rotate()">Rotate</button>
+    </div>
 </div>
 @section Scripts
 {
@@ -104,5 +145,29 @@
             });
 
         }
+        function checkPlayer() {
+            if ($("#captain :selected").text() == $("#vice :selected").text()) {
+                alert("Vice captain and captain must be different players!");
+                location.reload();
+            }
+        }
+        function ChangeGameweek() {
+             $.ajax({
+                url: '@Url.ActionLink("ChangeGameWeek", "Squad")',
+                method:'get',
+                data: {
+                    gw: $('#gw').val(),
+                },
+                 success: function () {
+                    console.log("?")
+                    location.reload();
+                }
+            });
+        }
+        if ($("#gw :selected").text() != $("#currGW").text())
+            $("#below").css('display', 'none');
+        else
+            $("#below").css('display', 'block');
+            //$("#rotate").prop('disabled', true);
     </script>
 }

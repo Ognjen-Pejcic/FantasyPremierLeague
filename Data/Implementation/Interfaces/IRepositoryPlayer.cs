@@ -11,5 +11,6 @@ namespace Data
     public interface IRepositoryPlayer : IRepository<Player>
     {
         List<Player> Search(Expression<Func<Player, bool>>p);
+        List<Player> GetAllByTeam(Team team);
     }
 }

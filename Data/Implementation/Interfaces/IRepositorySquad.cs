@@ -14,6 +14,8 @@ namespace Data.Interfaces
        
         Squad FindByID(int UserId,int SquadId);
         void Update(Squad squad);
-        Squad GetSquadForUser(int v);
+        Squad GetSquadForUser(int v, int gw);
+
+        List<Squad> GetSquadByGW( int gw);
     }
 }

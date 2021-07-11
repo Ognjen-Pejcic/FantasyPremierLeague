@@ -20,6 +20,7 @@ namespace Model.Domain
         public int UserId { get; set; }
      
         public List<Player> Players { get; set; }
+        public int GameWeekPoints { get; set; }
 
         public int Captain { get; set; }
         public int ViceCaptain { get; set; }

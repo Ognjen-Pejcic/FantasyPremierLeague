@@ -59,6 +59,11 @@ namespace Data.Implementation
             return context.Players.Include(p=>p.Team).ToList();
         }
 
+        public List<Player> GetAllByTeam(Team team)
+        {
+            return context.Players.Include(p => p.Team).Where(p => p.TeamID == team.ID).ToList();
+        }
+
         public List<Player> Search(Expression<Func<Player, bool>> p)
         {
             return context.Players.Where(p).ToList();
