@@ -75,7 +75,7 @@ namespace Fantasy
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Game}/{action=Index}/{id?}");
+                    pattern: "{controller=User}/{action=Index}/{id?}");
             });
         }
     }

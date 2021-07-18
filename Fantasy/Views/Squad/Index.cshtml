@@ -90,16 +90,33 @@
         <select id="captain" onchange="checkPlayer()">
             @for (int j = 0; j < Model.StartLine.Count; j++)
             {
-            <option value="c-@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
+
+                @if (Model.Squad.Captain == @Model.StartLine[j].PlayerId)
+                {
+                    <option selected value="c-@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
+                }
+                else
+                {
+                    <option value="c-@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
+                }
+
             }
         </select>
     </div>
     <div class="vc">
         <p>Vice captain is:</p>
         <select id="vice" onchange="checkPlayer()">
-            @for (int j = Model.StartLine.Count-1; j >= 0; j--)
+            @for (int j = Model.StartLine.Count - 1; j >= 0; j--)
             {
-            <option value="vc-@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
+                @if (Model.Squad.ViceCaptain == @Model.StartLine[j].PlayerId)
+                {
+                    <option selected value="vc-@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
+                }
+                else
+                {
+                    <option  value="vc-@Model.StartLine[j].PlayerId">@Model.StartLine[j].Name @Model.StartLine[j].Surname</option>
+                }
+
             }
         </select>
     </div>

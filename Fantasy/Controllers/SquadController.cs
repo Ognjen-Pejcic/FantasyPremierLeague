@@ -51,7 +51,7 @@ namespace Fantasy.Views
             svm.GWPoints = squad.GameWeekPoints;
             svm.Gameweek = (int)HttpContext.Session.GetInt32("gw");
             svm.MaxGameWeek = FindCurrentGeamWeek();
-
+            svm.Squad = squad;
             svm.stats = new List<PlayerGameStatistics>();
             PlayerGameStatistics gk = unitOfWork.Statistics.GetbygwID(svm.Gameweek, svm.Goalkeeper.PlayerId);
             svm.stats.Add(gk);

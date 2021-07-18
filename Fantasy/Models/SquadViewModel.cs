@@ -8,6 +8,7 @@ namespace Fantasy.Models
 {
     public class SquadViewModel
     {
+        public Squad Squad { get; set; }
         public Player Goalkeeper { get; set; }
         public List<Player> DefenderLine { get; set; }
         public List<Player> MidfielderLine { get; set; }
